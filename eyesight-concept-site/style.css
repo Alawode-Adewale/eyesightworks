@@ -1,38 +1,74 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Body */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f9f9f9;
-    color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
 }
-header {
-    background: #222;
-    color: white;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+/* Hero */
+.hero {
+  background: linear-gradient(to right, #000, #333);
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
 }
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
-nav a {
-    color: white;
-    margin-left: 1rem;
-    text-decoration: none;
+
+.hero .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 15px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
 }
-nav a:hover {
-    text-decoration: underline;
+
+/* Sections */
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
 }
-main {
-    padding: 2rem;
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  flex: 1 1 250px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Footer */
 footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+  background: #222;
+  color: #eee;
+  padding: 20px;
+  text-align: center;
 }
