@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio – EyesightWorks</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* === Portfolio Styles === */
+    .portfolio-section {
+      padding: 60px 20px;
+      background: #fdfdfd;
+      text-align: center;
+    }
+
+    .portfolio-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .portfolio-section p {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .portfolio-item {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      text-align: left;
+      transition: transform 0.3s;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .portfolio-item-content {
+      padding: 20px;
+    }
+
+    .portfolio-item h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .portfolio-item p {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .portfolio-item a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .portfolio-item a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .portfolio-section h1 {
+        font-size: 1.8rem;
+      }
+
+      .portfolio-item h3 {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html"><img src="logo.png" alt="EyesightWorks Logo" class="logo" /></a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="portfolio-section">
+      <h1>My Portfolio</h1>
+      <p>Selected works showcasing my skills in web design, brand identity, and development.</p>
+
+      <div class="portfolio-grid">
+        <!-- Project 1 -->
+        <div class="portfolio-item">
+          <img src="images/realestate-mockup.png" alt="Real Estate Website Mockup" />
+          <div class="portfolio-item-content">
+            <h3>Real Estate Website</h3>
+            <p>A fully responsive property listing site with modern UI built using HTML, CSS, JavaScript, and PHP.</p>
+            <a href="https://example.com">View Project</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="portfolio-item">
+          <img src="images/branding-kit.png" alt="Brand Identity Mockup" />
+          <div class="portfolio-item-content">
+            <h3>Brand Identity Design</h3>
+            <p>Complete brand identity design including logo, typography, and color system for a tech startup.</p>
+            <a href="#">View Project</a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="portfolio-item">
+          <img src="images/portfolio-site.png" alt="Personal Portfolio Site" />
+          <div class="portfolio-item-content">
+            <h3>Developer Portfolio</h3>
+            <p>My personal online portfolio created using GitHub Pages and responsive design practices.</p>
+            <a href="https://alawode-adewale.github.io/Eyesight-concept/">View Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 EyesightWorks. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
