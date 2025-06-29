@@ -98,4 +98,5 @@ footer {
 .newlogo {
   height: 50px;
   width: auto;
+   display: block;
 }
