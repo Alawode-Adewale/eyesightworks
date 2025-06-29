@@ -95,3 +95,7 @@ footer {
     gap: 0.5rem;
   }
 }
+.logo {
+  height: 50px;
+  width: auto;
+}
