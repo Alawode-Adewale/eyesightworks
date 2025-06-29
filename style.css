@@ -98,5 +98,13 @@ footer {
 .newlogoo {
   height: 50px;
   width: auto;
-   display: block;
+ max-width: 100%;
+  display: block;
+}
+
+/* Make logo smaller on mobile screens */
+@media screen and (max-width: 600px) {
+  .logo {
+    height: 35px;
+  }
 }
