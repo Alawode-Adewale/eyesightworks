@@ -122,3 +122,46 @@ footer {
 .btn-download:hover {
   background-color: #0056b3;
 }
+.portfolio {
+  padding: 40px;
+  background: #f9f9f9;
+}
+
+.portfolio h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.portfolio-item {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.portfolio-item-content {
+  padding: 20px;
+}
+
+.portfolio-item-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.portfolio-item-content p {
+  font-size: 14px;
+  color: #555;
+}
