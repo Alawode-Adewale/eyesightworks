@@ -165,3 +165,18 @@ footer {
   font-size: 14px;
   color: #555;
 }
+.navbar {
+  background: #333;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.navbar a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
