@@ -3,69 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EyesightWorks - Home</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Home | Web Developer & Brand Identity</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header class="header">
-  <div class="logo">
-    <img src="images/logo.png" alt="EyesightWorks Logo">
-  </div>
-  <nav class="navbar" id="navbar">
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <div class="hamburger" id="hamburger">
-    ☰
-  </div><header class="header">
-  <div class="logo">
-    <img src="images/logo.png" alt="EyesightWorks Logo">
-  </div>
+  <header>
+    <div class="container">
+      <div class="logo">MyPortfolio</div>
+      <nav id="nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="close-btn" id="close-btn">&times;</button>
+      </nav>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+    </div>
+  </header>
 
-  <nav class="navbar" id="navbar">
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <div class="hamburger-icons">
-    <span id="openMenu" class="hamburger">☰</span>
-    <span id="closeMenu" class="close-menu">×</span>
-  </div>
-</header>
-  <main class="hero-section container">
-    <h2>Building Strong Digital Brand Identities</h2>
-    <p>Professional web design and branding tailored for business growth.</p>
-    <a href="contact.html" class="btn">Let’s Work Together</a>
+  <main class="hero">
+    <div class="container">
+      <h1>Website Developer & Brand Identity Specialist</h1>
+      <p>I design and develop user-friendly, engaging, and professional websites that elevate your brand’s identity online and offline.</p>
+      <a href="portfolio.html" class="btn">View My Work</a>
+    </div>
   </main>
-  <script>
-  const hamburger = document.getElementById('hamburger');
-  const navbar = document.getElementById('navbar');
 
-  hamburger.addEventListener('click', () => {
-    navbar.classList.toggle('show');
-  });
-</script>
-    <script>
-  const navbar = document.getElementById('navbar');
-  const openMenu = document.getElementById('openMenu');
-  const closeMenu = document.getElementById('closeMenu');
-
-  openMenu.addEventListener('click', () => {
-    navbar.classList.add('show');
-    openMenu.classList.add('hide');
-    closeMenu.classList.add('show');
-  });
-
-  closeMenu.addEventListener('click', () => {
-    navbar.classList.remove('show');
-    closeMenu.classList.remove('show');
-    openMenu.classList.remove('hide');
-  });
-</script>
   <footer>
-    <p>&copy; 2025 EyesightWorks. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 MyPortfolio. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
