@@ -1,51 +1,53 @@
----
-layout: page
-title: Portfolio
-permalink: /portfolio/
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Web Developer & Brand Identity</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">MyPortfolio</div>
+      <nav id="nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="close-btn" id="close-btn">&times;</button>
+      </nav>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+    </div>
+  </header>
 
-<div class="portfolio">
-  <h1 class="page-title">Portfolio</h1>
-
-  <div class="portfolio-items">
-    {% for post in site.posts %}
-      <div class="portfolio-item">
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        <p>{{ post.excerpt }}</p>
+  <main class="portfolio">
+    <div class="container">
+      <h1>My Work</h1>
+      <div class="grid">
+        <div class="portfolio-item">
+          <img src="images/estate-mockup.jpg" alt="Real Estate Website" />
+          <h2>Real Estate Website</h2>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/signage-mockup.jpg" alt="Brand Identity - Signage" />
+          <h2>Branding - Signage</h2>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/website-mockup.jpg" alt="Website Development" />
+          <h2>Website Development</h2>
+        </div>
       </div>
-    {% endfor %}
-  </div>
-</div>
+    </div>
+  </main>
 
-<style>
-.portfolio {
-  padding: 2rem;
-}
-.page-title {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-.portfolio-items {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-.portfolio-item {
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
-  padding: 1rem;
-  border-radius: 8px;
-  transition: box-shadow 0.3s ease;
-}
-.portfolio-item:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.portfolio-item h2 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-}
-.portfolio-item p {
-  color: #666;
-  font-size: 0.95rem;
-}
-</style>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 MyPortfolio. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
