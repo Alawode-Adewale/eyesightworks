@@ -3,77 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services - EyesightWorks</title>
+  <title>Services | Web Developer & Brand Identity</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
-    <nav class="container">
-     <a href="index.html">
-  <img src="newlogoo.png" alt="EyesightWorks Logo" class="logo" />
-</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-  <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <header class="header">
-  <div class="logo">
-    <img src="images/logo.png" alt="EyesightWorks Logo">
-  </div>
+    <div class="container">
+      <div class="logo">MyPortfolio</div>
+      <nav id="nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="close-btn" id="close-btn">&times;</button>
+      </nav>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+    </div>
+  </header>
 
-  <nav class="navbar" id="navbar">
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <div class="hamburger-icons">
-    <span id="openMenu" class="hamburger">☰</span>
-    <span id="closeMenu" class="close-menu">×</span>
-  </div>
-</header>
-  <main class="container">
-    <h2>What We Offer</h2>
-    <ul class="service-list">
-      <li><strong>Web Development:</strong> Responsive, fast-loading, and modern websites.</li>
-      <li><strong>Brand Identity:</strong> Custom logo, color palette, typography and branding assets.</li>
-      <li><strong>UX/UI Design:</strong> Seamless and attractive user experiences that convert.</li>
-    </ul>
+  <main class="services">
+    <div class="container">
+      <h1>My Services</h1>
+      <div class="service-item">
+        <h2>Website Development</h2>
+        <p>Custom, responsive, and SEO-optimized websites that are fast, secure, and tailored to your business goals.</p>
+      </div>
+      <div class="service-item">
+        <h2>Brand Identity Design</h2>
+        <p>Complete brand identity packages including logo, color palette, typography, and brand assets that align with your mission.</p>
+      </div>
+    </div>
   </main>
-  <script>
-  const hamburger = document.getElementById('hamburger');
-  const navbar = document.getElementById('navbar');
 
-  hamburger.addEventListener('click', () => {
-    navbar.classList.toggle('show');
-  });
-</script>
-      <script>
-  const navbar = document.getElementById('navbar');
-  const openMenu = document.getElementById('openMenu');
-  const closeMenu = document.getElementById('closeMenu');
-
-  openMenu.addEventListener('click', () => {
-    navbar.classList.add('show');
-    openMenu.classList.add('hide');
-    closeMenu.classList.add('show');
-  });
-
-  closeMenu.addEventListener('click', () => {
-    navbar.classList.remove('show');
-    closeMenu.classList.remove('show');
-    openMenu.classList.remove('hide');
-  });
-</script>
   <footer>
-    <p>&copy; 2025 EyesightWorks. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 MyPortfolio. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
