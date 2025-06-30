@@ -3,61 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - EyesightWorks</title>
+  <title>Contact | Web Developer & Brand Identity</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="logo">
-      <img src="images/logo.png" alt="EyesightWorks Logo">
-    </div>
-    <nav class="navbar" id="navbar">
-      <a href="index.html">Home</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-    <div class="hamburger-icons">
-      <span id="openMenu" class="hamburger">☰</span>
-      <span id="closeMenu" class="close-menu">×</span>
+  <header>
+    <div class="container">
+      <div class="logo">MyPortfolio</div>
+      <nav id="nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <button class="close-btn" id="close-btn">&times;</button>
+      </nav>
+      <button class="hamburger" id="hamburger">&#9776;</button>
     </div>
   </header>
 
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" placeholder="John Doe" required>
-
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" placeholder="john@example.com" required>
-
-      <label for="message">Your Message</label>
-      <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <script>
-    const navbar = document.getElementById('navbar');
-    const openMenu = document.getElementById('openMenu');
-    const closeMenu = document.getElementById('closeMenu');
-
-    openMenu.addEventListener('click', () => {
-      navbar.classList.add('show');
-      openMenu.classList.add('hide');
-      closeMenu.classList.add('show');
-    });
-
-    closeMenu.addEventListener('click', () => {
-      navbar.classList.remove('show');
-      closeMenu.classList.remove('show');
-      openMenu.classList.remove('hide');
-    });
-  </script>
+  <main class="contact">
+    <div class="container">
+      <h1>Contact Me</h1>
+      <form action="mailto:youremail@example.com" method="POST" enctype="text/plain">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </main>
 
   <footer>
-    <p>&copy; 2025 EyesightWorks. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 MyPortfolio. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
