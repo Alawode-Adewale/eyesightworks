@@ -3,70 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services | EyesightWorks</title>
+  <title>Our Services | EyesightWorks</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="images/favicon.ico" />
+  <script defer>
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburger = document.querySelector('.hamburger');
+      const navMenu = document.querySelector('.nav-menu');
+
+      hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+      });
+    });
+  </script>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>EyesightWorks</h1>
-      <p class="tagline">Creative Vision in Every Pixel</p>
-      <nav id="navbar">
-        <ul id="menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="service.html" class="active">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-      </nav>
-    </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">EyesightWorks</div>
+    <button class="hamburger">&#9776;</button>
+    <nav class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="service.html" class="active">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <select class="language-switcher" onchange="location = this.value;">
+        <option value="#">Language</option>
+        <option value="#">English</option>
+        <option value="#">Français</option>
+        <option value="#">Español</option>
+      </select>
+    </nav>
   </header>
 
-  <main>
-    <section class="services">
-      <div class="container">
-        <h2>Our Services</h2>
-        <div class="service-item">
-          <h3>Website Development</h3>
-          <p>We craft modern, mobile-responsive websites tailored to your business goals — optimized for performance, accessibility, and user experience.</p>
-        </div>
-        <div class="service-item">
-          <h3>Brand Identity Design</h3>
-          <p>From logos to visual systems, we help you build a memorable and professional brand that resonates with your target audience.</p>
-        </div>
-        <div class="service-item">
-          <h3>Creative Consultancy</h3>
-          <p>Whether you're launching a startup or refreshing a brand, we offer creative strategy to help shape your digital identity.</p>
-        </div>
-      </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>What We Offer</h1>
+    <p class="tagline">We bring brands to life with powerful visual identity and functional websites.</p>
+    <a href="assets/EyesightWorks_BusinessCard.pdf" class="download-btn" download>Download Business Card</a>
+  </section>
+
+  <!-- Services Section -->
+  <main style="padding: 2rem;">
+    <section>
+      <h2>Our Core Services</h2>
+      <ul style="list-style-type: none; padding-left: 0; margin-top: 1rem;">
+        <li style="margin-bottom: 1.5rem;">
+          <h3>🌐 Website Development</h3>
+          <p>We create responsive and dynamic websites tailored to your brand’s goals — ensuring fast loading, great user experience, and SEO readiness.</p>
+        </li>
+        <li style="margin-bottom: 1.5rem;">
+          <h3>🎨 Brand Identity Design</h3>
+          <p>From logos to typography and color systems, we define the entire personality of your brand visually. We help businesses stand out with professional brand strategy and creative execution.</p>
+        </li>
+        <li>
+          <h3>📦 Creative Consulting</h3>
+          <p>We assist startups and businesses in aligning their visual goals with their mission — guiding you from concept to reality with strategic thinking and design expertise.</p>
+        </li>
+      </ul>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <div class="container footer-flex">
-      <p>&copy; 2025 EyesightWorks. All rights reserved.</p>
-      <div class="language-switcher">
-        <label for="lang">Language:</label>
-        <select id="lang" name="lang">
-          <option value="en">English</option>
-          <option value="fr">Français</option>
-          <option value="es">Español</option>
-          <option value="de">Deutsch</option>
-        </select>
-      </div>
-    </div>
+    &copy; 2025 EyesightWorks. All rights reserved.
   </footer>
-
-  <script>
-    const toggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("menu");
-
-    toggle.addEventListener("click", () => {
-      menu.classList.toggle("open");
-      toggle.classList.toggle("open");
-    });
-  </script>
 </body>
 </html>
