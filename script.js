@@ -1,11 +1,10 @@
-const nav = document.getElementById('nav');
-const hamburger = document.getElementById('hamburger');
-const closeBtn = document.getElementById('close-btn');
+// script.js
 
-hamburger.addEventListener('click', () => {
-  nav.classList.add('open');
-});
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
 
-closeBtn.addEventListener('click', () => {
-  nav.classList.remove('open');
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
 });
