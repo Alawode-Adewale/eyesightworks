@@ -3,40 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Home | Web Developer & Brand Identity</title>
+  <title>EyesightWorks | Web & Brand Identity</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <link rel="icon" href="images/favicon.png" />
 </head>
 <body>
   <header>
     <div class="container">
-      <div class="logo">MyPortfolio</div>
-      <nav id="nav">
-        <ul class="nav-links">
+      <h1 class="logo">EyesightWorks</h1>
+      <p class="tagline">Your Vision, Our Identity</p>
+      <nav>
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+        <ul id="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li>
+            <select id="language-switcher" aria-label="Choose Language">
+              <option value="en">EN</option>
+              <option value="fr">FR</option>
+              <option value="es">ES</option>
+              <!-- Add more as needed -->
+            </select>
+          </li>
         </ul>
-        <button class="close-btn" id="close-btn">&times;</button>
       </nav>
-      <button class="hamburger" id="hamburger">&#9776;</button>
     </div>
   </header>
 
-  <main class="hero">
+  <section class="hero">
     <div class="container">
-      <h1>Website Developer & Brand Identity Specialist</h1>
-      <p>I design and develop user-friendly, engaging, and professional websites that elevate your brand’s identity online and offline.</p>
-      <a href="portfolio.html" class="btn">View My Work</a>
+      <h2>We Build Brands and Digital Experiences</h2>
+      <p>Crafting professional websites and branding solutions for your business.</p>
+      <a href="portfolio.html" class="btn">View Portfolio</a>
     </div>
-  </main>
+  </section>
+
+  <section class="about">
+    <div class="container">
+      <h3>About EyesightWorks</h3>
+      <p>We are passionate about translating your brand vision into visually compelling and functional designs. With expertise in website development and brand identity, we deliver solutions that speak for you.</p>
+    </div>
+  </section>
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 MyPortfolio. All rights reserved.</p>
+      <p>&copy; 2025 EyesightWorks. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
