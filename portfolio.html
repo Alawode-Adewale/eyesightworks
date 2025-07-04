@@ -3,51 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Web Developer & Brand Identity</title>
+  <title>Portfolio | EyesightWorks</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
   <header>
-    <div class="container">
-      <div class="logo">MyPortfolio</div>
-      <nav id="nav">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="portfolio.html" class="active">Portfolio</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <button class="close-btn" id="close-btn">&times;</button>
-      </nav>
-      <button class="hamburger" id="hamburger">&#9776;</button>
-    </div>
+    <nav class="navbar">
+      <a href="index.html" class="logo">EyesightWorks</a>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="portfolio">
-    <div class="container">
-      <h1>My Work</h1>
-      <div class="grid">
-        <div class="portfolio-item">
-          <img src="images/estate-mockup.jpg" alt="Real Estate Website" />
-          <h2>Real Estate Website</h2>
-        </div>
-        <div class="portfolio-item">
-          <img src="images/signage-mockup.jpg" alt="Brand Identity - Signage" />
-          <h2>Branding - Signage</h2>
-        </div>
-        <div class="portfolio-item">
-          <img src="images/website-mockup.jpg" alt="Website Development" />
-          <h2>Website Development</h2>
-        </div>
+  <main>
+    <section class="intro">
+      <h1>My Portfolio</h1>
+      <p>Explore some of my recent works in real estate, branding, and web development.</p>
+    </section>
+
+    <section class="portfolio-gallery">
+      <div class="project">
+        <img src="images/estate-mockup.jpg" alt="Real Estate Project">
+        <h3>Real Estate Website</h3>
+        <p>Designed and developed a sleek property listing platform.</p>
       </div>
-    </div>
+      <div class="project">
+        <img src="images/signage-mockup.jpg" alt="Branding Mockup">
+        <h3>Brand Identity</h3>
+        <p>Brand visuals and signage created for growing businesses.</p>
+      </div>
+      <div class="project">
+        <img src="images/website-mockup.jpg" alt="Website Development">
+        <h3>Website Development</h3>
+        <p>Custom and responsive websites tailored for client needs.</p>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 MyPortfolio. All rights reserved.</p>
-    </div>
+    <p>&copy; 2025 EyesightWorks. All rights reserved.</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
