@@ -3,35 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EyesightWorks – Home</title>
+  <meta name="description" content="Eyesightworks | Website Developer & Brand Identity Expert">
+  <title>Eyesightworks | Home</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="images/favicon.png" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  <header>
-    <h1 data-key="welcome">Welcome to EyesightWorks</h1>
-    <nav>
-      <a href="index.html" data-key="home">Home</a>
-      <a href="services.html" data-key="services">Services</a>
+  <!-- Navigation -->
+  <header class="header">
+    <div class="logo">Eyesightworks</div>
+    <nav id="nav-menu" class="nav-menu">
+      <a href="index.html" class="active" data-key="home">Home</a>
+      <a href="service.html" data-key="services">Services</a>
       <a href="portfolio.html" data-key="portfolio">Portfolio</a>
       <a href="contact.html" data-key="contact">Contact</a>
-      <span class="lang-toggle">
-        <a href="#" onclick="setLanguage('en')">EN</a> |
-        <a href="#" onclick="setLanguage('fr')">FR</a>
-      </span>
+      <select class="language-switcher" aria-label="Language switcher" onchange="setLanguage(this.value)">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="es">ES</option>
+      </select>
     </nav>
+    <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">☰</button>
   </header>
 
-  <main>
-    <section>
-      <p data-key="intro">We specialize in clean website design, brand identity, and multilingual experiences.</p>
-    </section>
-  </main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 data-key="intro">Hello, I'm a Website Developer & Brand Identity Expert</h1>
+    <p class="tagline" data-key="tagline">Crafting Brands. Building Digital Futures.</p>
+    <a href="eyesightworks_business_card.pdf" class="download-btn" download>📎 <span data-key="download">Download My Business Card</span></a>
+  </section>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 EyesightWorks. All rights reserved.</p>
+    <p>&copy; 2025 Eyesightworks. <span data-key="rights">All rights reserved.</span></p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- JavaScript -->
+  <script>
+    const translations = {
+      en: {
+        home: "Home",
+        services: "Services",
+        portfolio: "Portfolio",
+        contact: "Contact",
+        intro: "Hello, I'm a Website Developer & Brand Identity Expert",
+        tagline: "Crafting Brands. Building Digital Futures.",
+        download: "Download My Business Card",
+        rights: "All rights reserved."
+      },
+      fr: {
+        home: "Accueil",
+        services: "Services",
+        portfolio: "Portfolio",
+        contact: "Contact",
+        intro: "Bonjour, je suis développeur web et expert en identité de marque",
+        tagline: "Créer des marques. Construire des avenirs numériques.",
+        download: "Télécharger ma carte de visite",
+        rights: "Tous droits réservés."
+      },
+      es: {
+        home: "Inicio",
+        services: "Servicios",
+        portfolio: "Portafolio",
+        contact: "Contacto",
+        intro: "Hola, soy desarrollador web y experto en identidad de marca",
+        tagline: "Creando marcas. Construyendo futuros digitales.",
+        download: "Descargar mi tarjeta de presentación",
+        rights: "Todos los derechos reservados."
+      }
+    };
+
+    function setLanguage(lang) {
+      localStorage.setItem("language", lang);
+      document.querySelectorAll("[data-key]").forEach(el => {
+        const key = el.getAttribute("data-key");
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+      document.querySelector('.language-switcher').value = lang;
+    }
+
+    function toggleMenu() {
+      const menu = document.getElementById('nav-menu');
+      menu.classList.toggle('show');
+    }
+
+    // Initialize language on page load
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedLang = localStorage.getItem("language") || "en";
+      setLanguage(savedLang);
+    });
+  </script>
 </body>
 </html>
