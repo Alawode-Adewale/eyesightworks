@@ -3,61 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EyesightWorks – Web & Brand Developer</title>
+  <title>EyesightWorks | Home</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <script defer src="script.js"></script>
 </head>
 <body>
-
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">EyesightWorks</div>
-    <nav>
-      <ul class="nav-links">
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">EyesightWorks</a>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <div class="lang-download">
-      <select aria-label="Switch Language">
-        <option value="en">EN</option>
-        <option value="fr">FR</option>
-        <option value="es">ES</option>
-      </select>
-      <a href="assets/business-card.pdf" class="download-btn" download>Download Portfolio</a>
-    </div>
-    <div class="hamburger" id="hamburger">&#9776;</div>
   </header>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="assets/business-card.pdf" download>Download Portfolio</a></li>
-    </ul>
-  </div>
-
-  <!-- Hero Section -->
-  <main class="hero">
-    <div class="hero-content">
-      <h1>Build Strong Brands and Websites</h1>
-      <p>Creative website developer and brand identity expert. Let’s bring your vision to life with precision and style.</p>
-      <a href="contact.html" class="cta-button">Start a Project</a>
+  <section class="hero">
+    <div class="container">
+      <h1>Building Brands That Last</h1>
+      <p>Professional Website Development & Brand Identity Design</p>
+      <div class="buttons">
+        <a href="assets/business-card.pdf" download class="btn">Download Business Card</a>
+        <div class="dropdown">
+          <button class="btn">Language</button>
+          <div class="dropdown-content">
+            <a href="#">English</a>
+            <a href="#">Français</a>
+            <a href="#">Español</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="hero-image">
-      <img src="images/website-mockup.jpg" alt="Website Mockup" />
-    </div>
-  </main>
+  </section>
 
-  <footer class="footer">
+  <footer>
     <p>&copy; 2025 EyesightWorks. All rights reserved.</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
