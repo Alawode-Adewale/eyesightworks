@@ -3,45 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EyesightWorks | Home</title>
+  <title>EyesightWorks – Home</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <script defer src="script.js"></script>
+  <link rel="icon" href="images/favicon.png" />
 </head>
 <body>
   <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">EyesightWorks</a>
-      <button class="hamburger" id="hamburger">&#9776;</button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    <h1 data-key="welcome">Welcome to EyesightWorks</h1>
+    <nav>
+      <a href="index.html" data-key="home">Home</a>
+      <a href="services.html" data-key="services">Services</a>
+      <a href="portfolio.html" data-key="portfolio">Portfolio</a>
+      <a href="contact.html" data-key="contact">Contact</a>
+      <span class="lang-toggle">
+        <a href="#" onclick="setLanguage('en')">EN</a> |
+        <a href="#" onclick="setLanguage('fr')">FR</a>
+      </span>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Building Brands That Last</h1>
-      <p>Professional Website Development & Brand Identity Design</p>
-      <div class="buttons">
-        <a href="assets/business-card.pdf" download class="btn">Download Business Card</a>
-        <div class="dropdown">
-          <button class="btn">Language</button>
-          <div class="dropdown-content">
-            <a href="#">English</a>
-            <a href="#">Français</a>
-            <a href="#">Español</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <main>
+    <section>
+      <p data-key="intro">We specialize in clean website design, brand identity, and multilingual experiences.</p>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 EyesightWorks. All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
