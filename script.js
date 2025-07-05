@@ -1,7 +1,18 @@
-// Toggle Mobile Navigation
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobile-menu');
+// Hamburger Menu Toggle
+const hamburger = document.querySelector('.hamburger');
+const mobileNav = document.querySelector('.mobile-nav');
 
 hamburger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('show');
+  mobileNav.classList.toggle('show');
 });
+
+// Optional: Language Dropdown (for dynamic future use)
+const languageSelect = document.getElementById('languageSelect');
+
+if (languageSelect) {
+  languageSelect.addEventListener('change', () => {
+    const selectedLang = languageSelect.value;
+    alert(`Language switched to: ${selectedLang}`);
+    // You can integrate real translations or redirects here later.
+  });
+}
