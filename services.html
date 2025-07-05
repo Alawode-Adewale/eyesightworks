@@ -3,48 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Services - EyesightWorks</title>
+  <title>Our Services | EyesightWorks</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="images/favicon.png" type="image/png" />
 </head>
 <body>
   <header>
-    <nav class="navbar">
-      <div class="logo"><a href="index.html">EyesightWorks</a></div>
-      <ul class="nav-links" id="mobile-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="hamburger" id="hamburger">&#9776;</div>
-    </nav>
+    <div class="container nav-container">
+      <h1 class="logo">EyesightWorks</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <select id="languageSelect" aria-label="Select language">
+              <option value="en">EN</option>
+              <option value="fr">FR</option>
+              <option value="es">ES</option>
+            </select>
+          </li>
+          <li>
+            <a href="assets/business-card.pdf" class="btn" download>Download Card</a>
+          </li>
+        </ul>
+        <div class="hamburger" aria-label="Toggle menu" tabindex="0">
+          &#9776;
+        </div>
+      </nav>
+    </div>
+    <ul class="mobile-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li>
+        <select id="languageSelectMobile" aria-label="Select language">
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+          <option value="es">ES</option>
+        </select>
+      </li>
+      <li>
+        <a href="assets/business-card.pdf" class="btn" download>Download Card</a>
+      </li>
+    </ul>
   </header>
 
-  <main class="services-page">
+  <main class="container">
     <section class="hero">
-      <h1>Our Services</h1>
-      <p>Crafting Digital Excellence for Brands That Matter.</p>
+      <h2>Our Services</h2>
+      <p>We provide professional solutions that combine creativity and functionality to elevate your brand.</p>
     </section>
 
-    <section class="services-section">
+    <section class="services-list">
       <div class="service-box">
-        <h2>Website Development</h2>
-        <p>Custom, modern websites that load fast, look great, and convert better. Responsive and user-friendly design tailored to your brand.</p>
+        <img src="images/website-mockup.jpg" alt="Website Development Mockup" />
+        <h3>Website Development</h3>
+        <p>Custom, responsive websites tailored to your business needs using modern technologies and best practices.</p>
       </div>
       <div class="service-box">
-        <h2>Brand Identity Design</h2>
-        <p>Unique branding including logos, style guides, and brand visuals to help you stand out with consistency across all platforms.</p>
+        <img src="images/signage-mockup.jpg" alt="Branding and Identity Mockup" />
+        <h3>Brand Identity</h3>
+        <p>We create visually appealing and consistent branding that helps your business stand out across platforms.</p>
       </div>
       <div class="service-box">
-        <h2>Translation Services</h2>
-        <p>Multilingual website integration and professional translation to help your brand connect globally.</p>
+        <img src="images/estate-mockup.jpg" alt="Real Estate Mockup Design" />
+        <h3>Real Estate Design</h3>
+        <p>Specialized mockups and design solutions for real estate agencies and property showcasing.</p>
       </div>
     </section>
-
-    <div class="cta-button-container">
-      <a href="contact.html" class="cta-button">Let’s Work Together</a>
-    </div>
   </main>
 
   <footer>
