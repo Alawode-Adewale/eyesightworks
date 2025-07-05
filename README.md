@@ -1,22 +1,16 @@
 # 👁️ EyesightWorks
 
-**EyesightWorks** is a creative and functional website design solution focused on vision-based projects. It combines clean design, brand identity development, and bilingual capabilities to deliver an accessible and professional web presence.
+**EyesightWorks** is a professional, bilingual website template designed for agencies, freelancers, or businesses focused on **website design**, **brand identity**, and visual presentation. With clean code, a responsive layout, and support for language switching, it’s ready for deployment or customization.
 
 ---
 
-## 🎨 What is EyesightWorks?
+## 🌟 Key Features
 
-EyesightWorks is a fully responsive and multi-language website template tailored for businesses or services in the vision care and design space. Whether you’re an optician, design agency, or brand strategist, this project helps present your services with clarity and style.
-
----
-
-## ✨ Key Features
-
-- 🎨 **Website Design** — Modern, accessible, and responsive HTML/CSS layout
-- 🧠 **Brand Identity** — Customizable logo, favicon, and downloadable business card
-- 🌐 **Bilingual Support** — Toggle between two languages (English + [Your Language])
-- 📱 Mobile-friendly design and touch-ready interface
-- ⚡ Fast loading and clean structure
+- 🎨 **Modern Website Design** – Responsive layout built with HTML, CSS, and JavaScript
+- 🧠 **Brand Identity Support** – Includes downloadable business card and custom favicon
+- 🌐 **Bilingual Functionality** – Language toggle feature built with plain JavaScript
+- 📱 **Mobile-First Approach** – Optimized for all screen sizes
+- ⚡ **Lightweight and Fast** – No frameworks or dependencies required
 
 ---
 
