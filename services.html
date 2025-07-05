@@ -3,66 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services | EyesightWorks</title>
+  <title>Our Services - EyesightWorks</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="icon" href="images/favicon.png" type="image/png" />
 </head>
 <body>
   <header>
     <nav class="navbar">
       <div class="logo"><a href="index.html">EyesightWorks</a></div>
-      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-      <ul class="nav-links" id="nav-links">
+      <ul class="nav-links" id="mobile-menu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li>
-          <select id="language-switcher">
-            <option value="en">EN</option>
-            <option value="fr">FR</option>
-            <option value="es">ES</option>
-          </select>
-        </li>
-        <li>
-          <a href="assets/business-card.pdf" class="download-btn" download>Download Profile</a>
-        </li>
       </ul>
+      <div class="hamburger" id="hamburger">&#9776;</div>
     </nav>
   </header>
 
-  <section class="hero small-hero">
-    <div class="hero-text">
-      <h1>My Services</h1>
-      <p>Crafting digital excellence through design, strategy & development</p>
-    </div>
-  </section>
+  <main class="services-page">
+    <section class="hero">
+      <h1>Our Services</h1>
+      <p>Crafting Digital Excellence for Brands That Matter.</p>
+    </section>
 
-  <section class="services">
-    <div class="container">
-      <div class="service-card">
-        <h3>Website Development</h3>
-        <p>
-          I create responsive, user-friendly websites that deliver results. From
-          landing pages to full-stack solutions, I help businesses grow online.
-        </p>
+    <section class="services-section">
+      <div class="service-box">
+        <h2>Website Development</h2>
+        <p>Custom, modern websites that load fast, look great, and convert better. Responsive and user-friendly design tailored to your brand.</p>
       </div>
-      <div class="service-card">
-        <h3>Brand Identity Design</h3>
-        <p>
-          Strong branding starts with a clear identity. I craft memorable logos,
-          business cards, and visual elements that tell your story.
-        </p>
+      <div class="service-box">
+        <h2>Brand Identity Design</h2>
+        <p>Unique branding including logos, style guides, and brand visuals to help you stand out with consistency across all platforms.</p>
       </div>
-      <div class="service-card">
-        <h3>UI/UX Design</h3>
-        <p>
-          From user research to wireframes and final designs, I ensure that your
-          digital experience is intuitive, attractive, and conversion-focused.
-        </p>
+      <div class="service-box">
+        <h2>Translation Services</h2>
+        <p>Multilingual website integration and professional translation to help your brand connect globally.</p>
       </div>
+    </section>
+
+    <div class="cta-button-container">
+      <a href="contact.html" class="cta-button">Let’s Work Together</a>
     </div>
-  </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 EyesightWorks. All rights reserved.</p>
