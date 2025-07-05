@@ -1,10 +1,7 @@
-// script.js
+// Toggle Mobile Navigation
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
 
-document.addEventListener("DOMContentLoaded", function () {
-  const menuToggle = document.getElementById("menu-toggle");
-  const navLinks = document.getElementById("nav-links");
-
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-  });
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('show');
 });
