@@ -5,76 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfolio | EyesightWorks</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer>
-    document.addEventListener('DOMContentLoaded', function () {
-      const hamburger = document.querySelector('.hamburger');
-      const navMenu = document.querySelector('.nav-menu');
-
-      hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('show');
-      });
-    });
-  </script>
+  <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
-
-  <!-- Header -->
-  <header class="header">
-    <div class="logo">EyesightWorks</div>
-    <button class="hamburger">&#9776;</button>
-    <nav class="nav-menu">
-      <a href="index.html">Home</a>
-      <a href="service.html">Services</a>
-      <a href="portfolio.html" class="active">Portfolio</a>
-      <a href="contact.html">Contact</a>
-      <select class="language-switcher" onchange="location = this.value;">
-        <option value="#">Language</option>
-        <option value="#">English</option>
-        <option value="#">Français</option>
-        <option value="#">Español</option>
-      </select>
+  <header>
+    <nav class="navbar">
+      <div class="logo">EyesightWorks</div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        ☰
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <select aria-label="Language switcher">
+            <option value="en">EN</option>
+            <option value="fr">FR</option>
+            <option value="es">ES</option>
+          </select>
+        </li>
+        <li><a href="assets/business-card.pdf" class="btn" download>Download Card</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Our Portfolio</h1>
-    <p class="tagline">Explore the real results we've created through branding and websites.</p>
-    <a href="assets/EyesightWorks_BusinessCard.pdf" class="download-btn" download>Download Business Card</a>
-  </section>
+  <main class="container">
+    <section class="hero">
+      <h1>My Portfolio</h1>
+      <p>Explore some of the recent projects I've worked on in branding, real estate, and web development.</p>
+    </section>
 
-  <!-- Portfolio Grid -->
-  <main class="portfolio-container">
     <section class="portfolio-grid">
-      
-      <!-- Real Estate -->
       <div class="portfolio-item">
         <img src="images/estate-mockup.jpg" alt="Real Estate Project" />
-        <h3>Real Estate Website</h3>
-        <p>Built a responsive website for a real estate brand to showcase listings and convert leads effectively.</p>
+        <h3>Real Estate Design</h3>
       </div>
-
-      <!-- Branding -->
       <div class="portfolio-item">
-        <img src="images/signage-mockup.jpg" alt="Brand Identity Design" />
+        <img src="images/signage-mockup.jpg" alt="Brand Identity Project" />
         <h3>Brand Identity</h3>
-        <p>Developed logo and visual assets for a modern startup including signage, color systems, and mockups.</p>
       </div>
-
-      <!-- Web Development -->
       <div class="portfolio-item">
-        <img src="images/website-mockup.jpg" alt="Web Design Project" />
-        <h3>Web Design</h3>
-        <p>Designed and coded a fully responsive and SEO-ready company site for online presence and engagement.</p>
+        <img src="images/website-mockup.jpg" alt="Website Project" />
+        <h3>Website Development</h3>
       </div>
-
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
-    &copy; 2025 EyesightWorks. All rights reserved.
+    <p>&copy; 2025 EyesightWorks. All rights reserved.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
