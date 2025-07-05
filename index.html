@@ -2,47 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EyesightWorks | Website Developer & Brand Identity</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="icon" href="images/favicon.png" type="image/png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EyesightWorks – Web & Brand Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/favicon.png" type="image/png" />
 </head>
 <body>
-  <header>
-    <div class="container nav-container">
-      <div class="logo">EyesightWorks</div>
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="service.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="menu-toggle" id="mobile-menu">&#9776;</div>
-      </nav>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">EyesightWorks</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="lang-download">
+      <select aria-label="Switch Language">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="es">ES</option>
+      </select>
+      <a href="assets/business-card.pdf" class="download-btn" download>Download Portfolio</a>
     </div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
   </header>
 
-  <section class="hero">
-    <div class="container hero-content">
-      <h1>Crafting Digital Presence</h1>
-      <p>Professional Website Development & Brand Identity Solutions</p>
-      <div class="actions">
-        <select id="langSelect" aria-label="Select language">
-          <option value="en">🌐 English</option>
-          <option value="fr">Français</option>
-          <option value="es">Español</option>
-          <option value="de">Deutsch</option>
-        </select>
-        <a href="files/business-card.pdf" download class="btn">📄 Download Portfolio</a>
-      </div>
-    </div>
-  </section>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="assets/business-card.pdf" download>Download Portfolio</a></li>
+    </ul>
+  </div>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 EyesightWorks. All rights reserved.</p>
+  <!-- Hero Section -->
+  <main class="hero">
+    <div class="hero-content">
+      <h1>Build Strong Brands and Websites</h1>
+      <p>Creative website developer and brand identity expert. Let’s bring your vision to life with precision and style.</p>
+      <a href="contact.html" class="cta-button">Start a Project</a>
     </div>
+    <div class="hero-image">
+      <img src="images/website-mockup.jpg" alt="Website Mockup" />
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 EyesightWorks. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
