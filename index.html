@@ -13,11 +13,11 @@
   <header class="header">
     <div class="logo">Eyesightworks</div>
     <nav id="nav-menu" class="nav-menu">
-      <a href="index.html" class="active" data-key="home">Home</a>
-      <a href="service.html" data-key="services">Services</a>
-      <a href="portfolio.html" data-key="portfolio">Portfolio</a>
-      <a href="contact.html" data-key="contact">Contact</a>
-      <select class="language-switcher" aria-label="Language switcher" onchange="setLanguage(this.value)">
+      <a href="index.html" class="active">Home</a>
+      <a href="service.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <select class="language-switcher" aria-label="Language switcher">
         <option value="en">EN</option>
         <option value="fr">FR</option>
         <option value="es">ES</option>
@@ -28,72 +28,22 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1 data-key="intro">Hello, I'm a Website Developer & Brand Identity Expert</h1>
-    <p class="tagline" data-key="tagline">Crafting Brands. Building Digital Futures.</p>
-    <a href="eyesightworks_business_card.pdf" class="download-btn" download>📎 <span data-key="download">Download My Business Card</span></a>
+    <h1>Hello, I'm a Website Developer & Brand Identity Expert</h1>
+    <p class="tagline">Crafting Brands. Building Digital Futures.</p>
+    <a href="eyesightworks_business_card.pdf" class="download-btn" download>📎 Download My Business Card</a>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Eyesightworks. <span data-key="rights">All rights reserved.</span></p>
+    <p>&copy; 2025 Eyesightworks. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript -->
+  <!-- JavaScript for Menu -->
   <script>
-    const translations = {
-      en: {
-        home: "Home",
-        services: "Services",
-        portfolio: "Portfolio",
-        contact: "Contact",
-        intro: "Hello, I'm a Website Developer & Brand Identity Expert",
-        tagline: "Crafting Brands. Building Digital Futures.",
-        download: "Download My Business Card",
-        rights: "All rights reserved."
-      },
-      fr: {
-        home: "Accueil",
-        services: "Services",
-        portfolio: "Portfolio",
-        contact: "Contact",
-        intro: "Bonjour, je suis développeur web et expert en identité de marque",
-        tagline: "Créer des marques. Construire des avenirs numériques.",
-        download: "Télécharger ma carte de visite",
-        rights: "Tous droits réservés."
-      },
-      es: {
-        home: "Inicio",
-        services: "Servicios",
-        portfolio: "Portafolio",
-        contact: "Contacto",
-        intro: "Hola, soy desarrollador web y experto en identidad de marca",
-        tagline: "Creando marcas. Construyendo futuros digitales.",
-        download: "Descargar mi tarjeta de presentación",
-        rights: "Todos los derechos reservados."
-      }
-    };
-
-    function setLanguage(lang) {
-      localStorage.setItem("language", lang);
-      document.querySelectorAll("[data-key]").forEach(el => {
-        const key = el.getAttribute("data-key");
-        if (translations[lang][key]) {
-          el.textContent = translations[lang][key];
-        }
-      });
-      document.querySelector('.language-switcher').value = lang;
-    }
-
     function toggleMenu() {
       const menu = document.getElementById('nav-menu');
       menu.classList.toggle('show');
     }
-
-    // Initialize language on page load
-    document.addEventListener("DOMContentLoaded", () => {
-      const savedLang = localStorage.getItem("language") || "en";
-      setLanguage(savedLang);
-    });
   </script>
 </body>
 </html>
