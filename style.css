@@ -65,11 +65,12 @@ button {
 .nav-menu a {
   font-weight: 500;
   color: #fff;
+  transition: color 0.3s ease;
 }
 
 .nav-menu a:hover,
 .nav-menu a.active {
-  color: #00c9a7;
+  color: #00c9a7; /* Mint Green Brand Color */
 }
 
 .language-switcher {
@@ -78,6 +79,8 @@ button {
   font-size: 0.9rem;
   background-color: #fff;
   color: #0e1c36;
+  border: none;
+  cursor: pointer;
 }
 
 /* Hamburger Menu */
@@ -111,20 +114,20 @@ button {
    Hero Section
 ======================================== */
 .hero {
-  background: linear-gradient(135deg, #0e1c36, #1f3a93);
-  color: #fff;
+  background: linear-gradient(to right, #00c9a7, #92fe9d); /* Mint green gradient */
+  color: #0e1c36;
   padding: 4rem 2rem;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 .hero .tagline {
   font-size: 1.2rem;
-  color: #cce5ff;
+  font-style: italic;
   margin-bottom: 2rem;
 }
 
@@ -154,8 +157,8 @@ button {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
 }
 
-.service-card h3,
-.service-card h2 {
+.service-card h2,
+.service-card h3 {
   font-size: 1.4rem;
   color: #0e1c36;
   margin-bottom: 0.6rem;
@@ -172,17 +175,18 @@ button {
 .btn,
 .download-btn {
   display: inline-block;
-  background-color: #00c9a7;
+  background-color: #00c9a7; /* Mint Green Brand Color */
   color: #fff;
   padding: 0.75rem 1.5rem;
   border-radius: 6px;
   font-weight: 600;
   transition: background 0.3s ease, transform 0.2s ease;
+  text-align: center;
 }
 
 .btn:hover,
 .download-btn:hover {
-  background-color: #00b293;
+  background-color: #00b293; /* Slightly darker mint green */
   transform: translateY(-2px);
 }
 
@@ -204,7 +208,7 @@ footer {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background-color: #00c9a7;
+  background-color: #00c9a7; /* Mint Green Brand Color */
   color: white;
   border: none;
   padding: 0.6rem 1rem;
