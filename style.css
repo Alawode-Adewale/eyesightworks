@@ -59,3 +59,43 @@ img {
 .language-switcher {
   padding: 0.3rem 0.5rem;
   border-radius: 4px;
+/* ===== Portfolio Section ===== */
+.portfolio-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.portfolio-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.portfolio-card h2 {
+  font-size: 1.3rem;
+  color: #0e1c36;
+  margin: 1rem;
+}
+
+.portfolio-card p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0 1rem 1.5rem;
+}
