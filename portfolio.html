@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Eyesightworks Portfolio | Explore Our Creative Web & Brand Identity Work" />
+  <meta name="author" content="Eyesightworks" />
+  <title>Portfolio | Eyesightworks</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Eyesightworks</div>
+    <nav id="nav-menu" class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="service.html">Services</a>
+      <a href="portfolio.html" class="active">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <select class="language-switcher" aria-label="Language switcher">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="es">ES</option>
+      </select>
+    </nav>
+    <button class="hamburger" aria-label="Toggle navigation menu" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <!-- Portfolio Section -->
+  <section class="hero">
+    <h1>My Work</h1>
+    <p class="tagline">A selection of featured projects crafted with creativity and purpose.</p>
+  </section>
+
+  <section class="portfolio-section">
+    <div class="portfolio-card">
+      <img src="images/project1.jpg" alt="Project 1 - Website Redesign" />
+      <h2>Modern Website Redesign</h2>
+      <p>A responsive website overhaul for a tech startup, built with clean UI and fast loading speed.</p>
+    </div>
+
+    <div class="portfolio-card">
+      <img src="images/project2.jpg" alt="Project 2 - Branding Package" />
+      <h2>Brand Identity Package</h2>
+      <p>Logo design, typography, color scheme, and brand guidelines for a fitness brand.</p>
+    </div>
+
+    <div class="portfolio-card">
+      <img src="images/project3.jpg" alt="Project 3 - E-commerce UI" />
+      <h2>E-commerce UI Design</h2>
+      <p>Product-focused user interface designed to boost conversions and user experience.</p>
+    </div>
+
+    <div class="portfolio-card">
+      <img src="images/project4.jpg" alt="Project 4 - Landing Page" />
+      <h2>Product Landing Page</h2>
+      <p>Marketing landing page for a SaaS tool with bold visuals and strategic CTAs.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Eyesightworks. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('nav-menu');
+      menu.classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>
