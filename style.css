@@ -1,12 +1,16 @@
-/* ===== Reset & Base Styles ===== */
+/* ========================================
+   Base Reset & Global Styles
+======================================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
@@ -16,35 +20,27 @@ body {
   line-height: 1.6;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 button {
-  cursor: pointer;
-  border: none;
+  font: inherit;
   background: none;
+  border: none;
+  cursor: pointer;
 }
 
-/* ===== Utility Classes ===== */
-.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-/* ===== Header & Navigation ===== */
+/* ========================================
+   Header & Navigation
+======================================== */
 .header {
   background-color: #0e1c36;
   color: #fff;
@@ -56,20 +52,19 @@ button {
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 .nav-menu {
   display: flex;
-  align-items: center;
   gap: 1.5rem;
+  align-items: center;
 }
 
 .nav-menu a {
-  color: #fff;
   font-weight: 500;
-  transition: color 0.3s ease;
+  color: #fff;
 }
 
 .nav-menu a:hover,
@@ -80,20 +75,19 @@ button {
 .language-switcher {
   padding: 0.4rem 0.6rem;
   border-radius: 6px;
-  font-size: 0.95rem;
-  border: none;
+  font-size: 0.9rem;
+  background-color: #fff;
+  color: #0e1c36;
 }
 
-/* ===== Hamburger (Mobile) ===== */
+/* Hamburger Menu */
 .hamburger {
   display: none;
   font-size: 1.8rem;
   color: #fff;
-  background: transparent;
-  border: none;
 }
 
-/* Responsive Nav */
+/* Mobile Nav */
 @media (max-width: 768px) {
   .nav-menu {
     display: none;
@@ -113,25 +107,69 @@ button {
   }
 }
 
-/* ===== Hero Section ===== */
+/* ========================================
+   Hero Section
+======================================== */
 .hero {
-  text-align: center;
-  padding: 4rem 2rem;
-  background: linear-gradient(to right, #0e1c36, #152a4e);
+  background: linear-gradient(135deg, #0e1c36, #1f3a93);
   color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
 }
 
 .hero h1 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   margin-bottom: 1rem;
 }
 
 .hero .tagline {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
   color: #cce5ff;
+  margin-bottom: 2rem;
 }
 
+/* ========================================
+   Services Section
+======================================== */
+.services-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3,
+.service-card h2 {
+  font-size: 1.4rem;
+  color: #0e1c36;
+  margin-bottom: 0.6rem;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ========================================
+   Buttons
+======================================== */
+.btn,
 .download-btn {
   display: inline-block;
   background-color: #00c9a7;
@@ -139,58 +177,18 @@ button {
   padding: 0.75rem 1.5rem;
   border-radius: 6px;
   font-weight: 600;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
+.btn:hover,
 .download-btn:hover {
   background-color: #00b293;
+  transform: translateY(-2px);
 }
 
-/* ===== Services Preview Section (Optional) ===== */
-.services-preview {
-  padding: 3rem 2rem;
-  max-width: 1100px;
-  margin: auto;
-  text-align: center;
-}
-
-.services-preview h2 {
-  font-size: 2rem;
-  color: #0e1c36;
-  margin-bottom: 2rem;
-}
-
-.service-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
-}
-
-.service-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.service-card h3 {
-  font-size: 1.3rem;
-  color: #0e1c36;
-  margin-bottom: 0.5rem;
-}
-
-.service-card p {
-  font-size: 1rem;
-  color: #555;
-}
-
-/* ===== Footer ===== */
+/* ========================================
+   Footer
+======================================== */
 footer {
   text-align: center;
   padding: 2rem;
@@ -199,7 +197,9 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ===== Scroll-to-Top Button ===== */
+/* ========================================
+   Scroll-to-Top Button
+======================================== */
 #scrollBtn {
   position: fixed;
   bottom: 2rem;
@@ -213,14 +213,15 @@ footer {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   display: none;
   z-index: 1000;
-  transition: background 0.3s ease;
 }
 
 #scrollBtn:hover {
   background-color: #00b293;
 }
 
-/* ===== Animations ===== */
+/* ========================================
+   Animations
+======================================== */
 @keyframes fade-up {
   from {
     transform: translateY(20px);
