@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore professional web development and branding services by Eyesightworks.">
+  <meta name="author" content="Eyesightworks">
+  <meta property="og:title" content="Eyesightworks | Services">
+  <meta property="og:description" content="Web Development, Brand Design & Digital Strategy">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/social-preview.png">
+
+  <title>Eyesightworks | Services</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Eyesightworks</div>
+    <nav id="nav-menu" class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="service.html" class="active">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <select class="language-switcher" aria-label="Language switcher">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="es">ES</option>
+      </select>
+    </nav>
+    <button class="hamburger" aria-label="Toggle navigation menu" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>My Services</h1>
+    <p class="tagline">Helping You Stand Out Digitally & Visually</p>
+  </section>
+
+  <!-- Service Cards Section -->
+  <section class="services-section">
+    <div class="service-card">
+      <h2>💻 Website Development</h2>
+      <p>Custom, responsive websites built to perform and represent your brand online. From landing pages to full platforms, I ensure clean design and strong structure.</p>
+    </div>
+
+    <div class="service-card">
+      <h2>🎨 Brand Identity Design</h2>
+      <p>Unique logos, color palettes, and brand systems that communicate your mission and stand out in a competitive market.</p>
+    </div>
+
+    <div class="service-card">
+      <h2>📱 UI/UX Design</h2>
+      <p>Clean, user-friendly designs that prioritize usability and seamless experience across web and mobile platforms.</p>
+    </div>
+
+    <div class="service-card">
+      <h2>🚀 Digital Strategy</h2>
+      <p>Insights on SEO, digital marketing, and social positioning to ensure your brand thrives online and reaches the right audience.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Eyesightworks. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Mobile Menu -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('nav-menu');
+      menu.classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>
