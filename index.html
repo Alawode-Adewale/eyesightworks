@@ -13,13 +13,13 @@
 
   <title>Eyesightworks | Home</title>
 
-  <!-- Google Font -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
   <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
-  <!-- CSS -->
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -27,6 +27,7 @@
   <!-- Header -->
   <header class="header">
     <div class="logo">Eyesightworks</div>
+    <button class="hamburger" aria-label="Toggle navigation menu" onclick="toggleMenu()">☰</button>
     <nav id="nav-menu" class="nav-menu" aria-label="Main navigation">
       <a href="index.html" class="active">Home</a>
       <a href="service.html">Services</a>
@@ -39,17 +40,35 @@
         <option value="es">ES</option>
       </select>
     </nav>
-    <button class="hamburger" aria-label="Toggle navigation menu" onclick="toggleMenu()">☰</button>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero animate-fade-up">
-    <h1>Hello, I'm a Website Developer & Brand Identity Expert</h1>
-    <p class="tagline">Crafting Brands. Building Digital Futures.</p>
-    <a href="eyesightworks_business_card.pdf" class="download-btn" download>
-      📎 Download My Business Card
-    </a>
-  </section>
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero animate-fade-up">
+      <h1>Hello, I'm a Website Developer & Brand Identity Expert</h1>
+      <p class="tagline">Crafting Brands. Building Digital Futures.</p>
+      <a href="assets/eyesightworks_business_card.pdf" class="download-btn" download>
+        📎 Download My Business Card
+      </a>
+    </section>
+
+    <!-- Optional: Add Services Preview -->
+    <section class="services-preview">
+      <div class="service-box">
+        <h2>Web Development</h2>
+        <p>Custom-built, responsive websites tailored for performance and user experience.</p>
+      </div>
+      <div class="service-box">
+        <h2>Brand Identity</h2>
+        <p>Logos, style guides, and visuals that communicate your brand with clarity.</p>
+      </div>
+      <div class="service-box">
+        <h2>UI/UX Design</h2>
+        <p>Beautiful interfaces and intuitive user journeys to maximize engagement.</p>
+      </div>
+    </section>
+  </main>
 
   <!-- Scroll to Top Button -->
   <button onclick="scrollToTop()" id="scrollBtn" title="Back to top">↑</button>
@@ -70,5 +89,14 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Show scroll-to-top button
-    window.addEventListener('scroll',
+    window.addEventListener('scroll', () => {
+      const scrollBtn = document.getElementById('scrollBtn');
+      if (window.scrollY > 300) {
+        scrollBtn.style.display = 'block';
+      } else {
+        scrollBtn.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
