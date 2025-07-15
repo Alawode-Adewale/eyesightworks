@@ -3,20 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Explore professional web development and branding services by Eyesightworks.">
-  <meta name="author" content="Eyesightworks">
-  <meta property="og:title" content="Eyesightworks | Services">
-  <meta property="og:description" content="Web Development, Brand Design & Digital Strategy">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="images/social-preview.png">
-
-  <title>Eyesightworks | Services</title>
+  <meta name="description" content="Explore services by Eyesightworks – Web Development, Branding, and Visual Design." />
+  <meta name="author" content="Eyesightworks" />
+  <title>Services | Eyesightworks</title>
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
@@ -32,49 +24,50 @@
       <a href="portfolio.html">Portfolio</a>
       <a href="contact.html">Contact</a>
       <select class="language-switcher" aria-label="Language switcher">
-        <option value="en">EN</option>
-        <option value="fr">FR</option>
-        <option value="es">ES</option>
+        <option value="#">EN</option>
+        <option value="#">FR</option>
+        <option value="#">ES</option>
       </select>
     </nav>
-    <button class="hamburger" aria-label="Toggle navigation menu" onclick="toggleMenu()">☰</button>
+    <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>My Services</h1>
-    <p class="tagline">Helping You Stand Out Digitally & Visually</p>
+  <!-- Services Hero -->
+  <section class="hero hero-service">
+    <h1>What We Offer</h1>
+    <p class="tagline">Professional services tailored to grow your business online and offline.</p>
   </section>
 
-  <!-- Service Cards Section -->
-  <section class="services-section">
+  <!-- Services Grid -->
+  <main class="services-section">
     <div class="service-card">
-      <h2>💻 Website Development</h2>
-      <p>Custom, responsive websites built to perform and represent your brand online. From landing pages to full platforms, I ensure clean design and strong structure.</p>
+      <img src="images/web-dev.svg" alt="Web Development Icon" />
+      <h3>Website Development</h3>
+      <p>Custom-coded responsive websites built for performance, SEO, and scalability.</p>
     </div>
-
     <div class="service-card">
-      <h2>🎨 Brand Identity Design</h2>
-      <p>Unique logos, color palettes, and brand systems that communicate your mission and stand out in a competitive market.</p>
+      <img src="images/branding.svg" alt="Brand Identity Icon" />
+      <h3>Brand Identity</h3>
+      <p>Logo design, typography, color systems, and complete brand guidelines.</p>
     </div>
-
     <div class="service-card">
-      <h2>📱 UI/UX Design</h2>
-      <p>Clean, user-friendly designs that prioritize usability and seamless experience across web and mobile platforms.</p>
+      <img src="images/uiux.svg" alt="UI/UX Design Icon" />
+      <h3>UI/UX Design</h3>
+      <p>Intuitive and engaging designs for websites, apps, and digital experiences.</p>
     </div>
-
     <div class="service-card">
-      <h2>🚀 Digital Strategy</h2>
-      <p>Insights on SEO, digital marketing, and social positioning to ensure your brand thrives online and reaches the right audience.</p>
+      <img src="images/seo.svg" alt="SEO Icon" />
+      <h3>SEO & Optimization</h3>
+      <p>Technical SEO, speed optimization, and content strategies for visibility.</p>
     </div>
-  </section>
+  </main>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Eyesightworks. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript for Mobile Menu -->
+  <!-- JavaScript -->
   <script>
     function toggleMenu() {
       const menu = document.getElementById('nav-menu');
