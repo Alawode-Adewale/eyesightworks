@@ -23,6 +23,27 @@ img {
   height: auto;
 }
 
+/* ===== Shared Button Style ===== */
+.btn,
+.download-btn {
+  display: inline-block;
+  background-color: #00c9a7;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover,
+.download-btn:hover {
+  background-color: #00b396;
+  color: #fff;
+}
+
 /* ===== Header & Navigation ===== */
 .header {
   background-color: #0e1c36;
@@ -63,83 +84,39 @@ img {
   font-size: 0.9rem;
 }
 
-/* ===== Portfolio Section ===== */
-.portfolio-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 3rem 2rem;
-  max-width: 1100px;
-  margin: auto;
+/* ===== Mobile Navigation ===== */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
 }
 
-.portfolio-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #0e1c36;
+    padding: 1rem 2rem;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
 }
 
-.portfolio-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.portfolio-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.portfolio-card h2 {
-  font-size: 1.3rem;
-  color: #0e1c36;
-  margin: 1rem;
-}
-
-.portfolio-card p {
-  font-size: 1rem;
-  color: #333;
-  margin: 0 1rem 1.5rem;
-}
-/* ===== Contact Section ===== */
-.contact-section {
-  padding: 3rem 2rem;
-  background-color: #fff;
-  max-width: 800px;
-  margin: auto;
-}
-
-.contact-container {
-  background: #f1f4f9;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-.contact-form label {
-  font-weight: 600;
-  color: #0e1c36;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 0.75rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-family: 'Inter', sans-serif;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #00c9a7;
-  outline: none;
-}
+/* ===== Hero Section ===== */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradi
