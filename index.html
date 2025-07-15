@@ -8,7 +8,7 @@
   <meta property="og:title" content="Eyesightworks | Website Developer & Brand Identity Expert" />
   <meta property="og:description" content="Crafting Brands. Building Digital Futures." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="images/social-preview.png" />
+  <meta property="og:image" content="images/estate-mockup.jpg" />
   <meta name="theme-color" content="#0e1c36" />
 
   <title>Eyesightworks | Home</title>
@@ -48,24 +48,30 @@
     <section class="hero animate-fade-up">
       <h1>Hello, I'm a Website Developer & Brand Identity Expert</h1>
       <p class="tagline">Crafting Brands. Building Digital Futures.</p>
-      <a href="assets/eyesightworks_business_card.pdf" class="download-btn" download>
-        📎 Download My Business Card
+      <a href="assets/business-card.pdf" class="download-btn" download>
+        📎 Download Business Card
+      </a>
+      <a href="assets/beige.pdf" class="download-btn" download>
+        🗎 Download Beige Brochure
       </a>
     </section>
 
-    <!-- Optional: Add Services Preview -->
+    <!-- Mockup Showcase -->
     <section class="services-preview">
       <div class="service-box">
-        <h2>Web Development</h2>
-        <p>Custom-built, responsive websites tailored for performance and user experience.</p>
+        <img src="images/website-mockup.jpg" alt="Website mockup preview" />
+        <h2>Web Design</h2>
+        <p>Clean, functional websites with performance and UX in mind.</p>
       </div>
       <div class="service-box">
-        <h2>Brand Identity</h2>
-        <p>Logos, style guides, and visuals that communicate your brand with clarity.</p>
+        <img src="images/estate-mockup.jpg" alt="Estate branding mockup" />
+        <h2>Real Estate Branding</h2>
+        <p>Visual identity systems tailored for property and real estate.</p>
       </div>
       <div class="service-box">
-        <h2>UI/UX Design</h2>
-        <p>Beautiful interfaces and intuitive user journeys to maximize engagement.</p>
+        <img src="images/signage-mockup.jpg" alt="Signage mockup preview" />
+        <h2>Signage & Print</h2>
+        <p>Professional layouts for outdoor signage, business cards, and more.</p>
       </div>
     </section>
   </main>
@@ -91,11 +97,7 @@
 
     window.addEventListener('scroll', () => {
       const scrollBtn = document.getElementById('scrollBtn');
-      if (window.scrollY > 300) {
-        scrollBtn.style.display = 'block';
-      } else {
-        scrollBtn.style.display = 'none';
-      }
+      scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
     });
   </script>
 </body>
