@@ -5,12 +5,21 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Inter', sans-serif;
-  line-height: 1.6;
   background-color: #f7f9fc;
   color: #333;
-  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 a {
@@ -18,30 +27,21 @@ a {
   color: inherit;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* ===== Shared Button Style ===== */
-.btn,
-.download-btn {
-  display: inline-block;
-  background-color: #00c9a7;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  border: none;
-  border-radius: 6px;
+button {
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  border: none;
+  background: none;
 }
 
-.btn:hover,
-.download-btn:hover {
-  background-color: #00b396;
-  color: #fff;
+/* ===== Utility Classes ===== */
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 /* ===== Header & Navigation ===== */
@@ -52,18 +52,18 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  flex-wrap: wrap;
 }
 
 .logo {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .nav-menu {
   display: flex;
-  gap: 1.5rem;
   align-items: center;
+  gap: 1.5rem;
 }
 
 .nav-menu a {
@@ -78,40 +78,38 @@ img {
 }
 
 .language-switcher {
-  padding: 0.3rem 0.5rem;
-  border-radius: 4px;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
   border: none;
-  font-size: 0.9rem;
 }
 
-/* ===== Mobile Navigation ===== */
+/* ===== Hamburger (Mobile) ===== */
 .hamburger {
   display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
+  font-size: 1.8rem;
   color: #fff;
-  cursor: pointer;
+  background: transparent;
+  border: none;
 }
 
+/* Responsive Nav */
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
   .nav-menu {
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
     width: 100%;
     background-color: #0e1c36;
-    padding: 1rem 2rem;
+    margin-top: 1rem;
+    padding: 1rem;
   }
 
   .nav-menu.show {
     display: flex;
+  }
+
+  .hamburger {
+    display: block;
   }
 }
 
@@ -119,4 +117,121 @@ img {
 .hero {
   text-align: center;
   padding: 4rem 2rem;
-  background: linear-gradi
+  background: linear-gradient(to right, #0e1c36, #152a4e);
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero .tagline {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #cce5ff;
+}
+
+.download-btn {
+  display: inline-block;
+  background-color: #00c9a7;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #00b293;
+}
+
+/* ===== Services Preview Section (Optional) ===== */
+.services-preview {
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.services-preview h2 {
+  font-size: 2rem;
+  color: #0e1c36;
+  margin-bottom: 2rem;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  color: #0e1c36;
+  margin-bottom: 0.5rem;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #0e1c36;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* ===== Scroll-to-Top Button ===== */
+#scrollBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #00c9a7;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+#scrollBtn:hover {
+  background-color: #00b293;
+}
+
+/* ===== Animations ===== */
+@keyframes fade-up {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out both;
+}
