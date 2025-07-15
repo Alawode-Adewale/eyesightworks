@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | EyesightWorks</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer>
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburger = document.querySelector('.hamburger');
+      const navMenu = document.querySelector('.nav-menu');
+      hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">EyesightWorks</div>
+    <button class="hamburger">&#9776;</button>
+    <nav class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="service.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html" class="active">Contact</a>
+      <select class="language-switcher" onchange="location = this.value;">
+        <option value="#">Language</option>
+        <option value="#">English</option>
+        <option value="#">Français</option>
+        <option value="#">Español</option>
+      </select>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Contact Us</h1>
+    <p class="tagline">Let’s talk about how we can bring your vision to life.</p>
+  </section>
+
+  <!-- Contact Form Section -->
+  <main class="contact-section">
+    <div class="contact-container">
+      <form action="#" method="POST" class="contact-form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your name">
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" required placeholder="Project topic">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required placeholder="Write your message here..."></textarea>
+
+        <button type="submit" class="download-btn">Send Message</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 EyesightWorks. All rights reserved.
+  </footer>
+
+</body>
+</html>
