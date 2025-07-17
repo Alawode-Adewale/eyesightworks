@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Eyesightworks | Website Developer & Brand Identity">
+  <meta name="description" content="Eyesightworks – Web Developer & Brand Identity Expert">
   <title>Eyesightworks | Web Developer & Brand Expert</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -25,53 +25,79 @@
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#portfolio">Portfolio</a>
-    <a href="#testimonials">Testimonials</a>
+    <a href="testimonials.html">Testimonials</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Home Section -->
+  <!-- Hero Section -->
   <section id="home" class="hero">
-    <h2>Welcome to Eyesightworks</h2>
-    <p>Your trusted partner for digital transformation, creative branding, and global communication.</p>
+    <div class="hero-text">
+      <h2>Build Strong Digital Brands</h2>
+      <p>Crafting websites and identities that speak your brand's vision with clarity and power.</p>
+      <a href="eyesightworks_business_card.pdf" class="btn" download>📎 Download My Business Card</a>
+    </div>
   </section>
 
-  <!-- About Section -->
+  <!-- About -->
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m a professional web developer, brand strategist, and multilingual translator helping businesses thrive online with clarity and creativity.</p>
+    <p>I’m a web developer and brand strategist dedicated to helping businesses establish strong, modern identities. With over 7 years of experience, I’ve worked with companies globally to deliver impactful design and functional websites.</p>
   </section>
 
-  <!-- Services Section -->
+  <!-- Services -->
   <section id="services">
     <h2>Services</h2>
     <ul>
-      <li><strong>Web Development</strong> – Clean, responsive, modern websites</li>
-      <li><strong>Brand Identity</strong> – Logos, color schemes, brand strategy</li>
-      <li><strong>Translation</strong> – Multilingual site content and documentation</li>
+      <li><strong>Website Development</strong> – Responsive, SEO-optimized, fast-loading websites</li>
+      <li><strong>Brand Identity Design</strong> – Logos, color schemes, typography, and visual strategy</li>
+      <li><strong>Language Translation</strong> – Multilingual websites and brand communications</li>
     </ul>
   </section>
 
-  <!-- Portfolio Section -->
+  <!-- Portfolio -->
   <section id="portfolio">
-    <h2>Portfolio</h2>
+    <h2>Featured Projects</h2>
     <div class="portfolio-grid">
       <div class="card">
-        <img src="https://via.placeholder.com/400x180" alt="Project 1">
+        <img src="images/project1.jpg" alt="Project 1">
         <div class="card-body">
-          <h3>Client Project A</h3>
-          <p>A responsive brand website for a health startup.</p>
+          <h3>Creative Agency Website</h3>
+          <p>A modern, vibrant site designed for a creative agency looking to stand out online.</p>
         </div>
       </div>
       <div class="card">
-        <img src="https://via.placeholder.com/400x180" alt="Project 2">
+        <img src="images/project2.jpg" alt="Project 2">
         <div class="card-body">
-          <h3>Brand Identity Suite</h3>
-          <p>Complete visual identity for a fintech platform.</p>
+          <h3>eCommerce Branding</h3>
+          <p>Complete brand overhaul including logo, packaging, and mobile-first website.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section id="testimonials">
-    <h2>Testimonials</h2>
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:hello@eyesightworks.com">hello@eyesightworks.com</a></p>
+    <p>WhatsApp: +123-456-7890</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/eyesightworks" target="_blank">linkedin.com/in/eyesightworks</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Eyesightworks. All rights reserved.</p>
+  </footer>
+
+  <!-- Language Script -->
+  <script>
+    let isEnglish = true;
+    function toggleLang() {
+      isEnglish = !isEnglish;
+      document.querySelector(".lang-toggle").textContent = isEnglish ? "FR" : "EN";
+      document.getElementById("subtitle").textContent = isEnglish
+        ? "Web Developer • Brand Identity Expert • Translator"
+        : "Développeur Web • Expert Identité Visuelle • Traducteur";
+    }
+  </script>
+</body>
+</html>
