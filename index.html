@@ -1,103 +1,35 @@
+<!-- index.html (Home Page) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Eyesightworks – Web Developer & Brand Identity Expert">
-  <title>Eyesightworks | Web Developer & Brand Expert</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet" />
+  <title>Eyesightworks | Home</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
 </head>
 <body>
-
-  <!-- Language Switcher -->
-  <button class="lang-toggle" onclick="toggleLang()">FR</button>
-
-  <!-- Header -->
-  <header class="header">
-    <h1 id="title">Eyesightworks</h1>
-    <p id="subtitle">Web Developer • Brand Identity Expert • Translator</p>
+  <header>
+    <h1>Eyesightworks</h1>
+    <p>Creative Web Developer & Brand Identity Expert</p>
   </header>
 
-  <!-- Navigation -->
-  <nav class="nav">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#portfolio">Portfolio</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
     <a href="testimonials.html">Testimonials</a>
-    <a href="#contact">Contact</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-text">
-      <h2>Build Strong Digital Brands</h2>
-      <p>Crafting websites and identities that speak your brand's vision with clarity and power.</p>
-      <a href="eyesightworks_business_card.pdf" class="btn" download>📎 Download My Business Card</a>
-    </div>
+  <section class="hero">
+    <h2>Build a Powerful Digital Presence</h2>
+    <p>We create beautiful websites and strong brand identities to help you grow.</p>
   </section>
 
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a web developer and brand strategist dedicated to helping businesses establish strong, modern identities. With over 7 years of experience, I’ve worked with companies globally to deliver impactful design and functional websites.</p>
-  </section>
-
-  <!-- Services -->
-  <section id="services">
-    <h2>Services</h2>
-    <ul>
-      <li><strong>Website Development</strong> – Responsive, SEO-optimized, fast-loading websites</li>
-      <li><strong>Brand Identity Design</strong> – Logos, color schemes, typography, and visual strategy</li>
-      <li><strong>Language Translation</strong> – Multilingual websites and brand communications</li>
-    </ul>
-  </section>
-
-  <!-- Portfolio -->
-  <section id="portfolio">
-    <h2>Featured Projects</h2>
-    <div class="portfolio-grid">
-      <div class="card">
-        <img src="images/project1.jpg" alt="Project 1">
-        <div class="card-body">
-          <h3>Creative Agency Website</h3>
-          <p>A modern, vibrant site designed for a creative agency looking to stand out online.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="images/project2.jpg" alt="Project 2">
-        <div class="card-body">
-          <h3>eCommerce Branding</h3>
-          <p>Complete brand overhaul including logo, packaging, and mobile-first website.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:hello@eyesightworks.com">hello@eyesightworks.com</a></p>
-    <p>WhatsApp: +123-456-7890</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/eyesightworks" target="_blank">linkedin.com/in/eyesightworks</a></p>
-  </section>
-
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Eyesightworks. All rights reserved.</p>
   </footer>
-
-  <!-- Language Script -->
-  <script>
-    let isEnglish = true;
-    function toggleLang() {
-      isEnglish = !isEnglish;
-      document.querySelector(".lang-toggle").textContent = isEnglish ? "FR" : "EN";
-      document.getElementById("subtitle").textContent = isEnglish
-        ? "Web Developer • Brand Identity Expert • Translator"
-        : "Développeur Web • Expert Identité Visuelle • Traducteur";
-    }
-  </script>
 </body>
 </html>
