@@ -36,6 +36,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 1000;
+  animation: fadeInDown 0.6s ease-in-out;
 }
 
 .nav-container {
@@ -88,6 +89,7 @@ a {
   color: #0e1c36;
   text-align: center;
   padding: 5rem 2rem;
+  animation: fadeInUp 0.8s ease-in-out;
 }
 
 .hero h1 {
@@ -115,6 +117,59 @@ a {
   background-color: #333;
 }
 
+/* Contact Form */
+.contact-form {
+  padding: 4rem 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.9s ease-in-out;
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #0e1c36;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form button {
+  background-color: #00c9a7;
+  color: white;
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0e1c36;
+}
+
 /* Footer */
 .footer {
   background-color: #0e1c36;
@@ -122,6 +177,39 @@ a {
   text-align: center;
   padding: 2rem 1rem;
   font-size: 0.9rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Responsive Navigation */
