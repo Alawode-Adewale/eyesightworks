@@ -102,4 +102,111 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color
+    background-color: #0e1c36;
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* ========================================
+   Hero Section
+======================================== */
+.hero {
+  background: linear-gradient(135deg, #00c9a7, #92fe9d);
+  color: #0e1c36;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+  color: #0e1c36;
+}
+
+/* ========================================
+   Download Button
+======================================== */
+.download-btn {
+  display: inline-block;
+  background-color: #0e1c36;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.download-btn:hover {
+  background-color: #00c9a7;
+  color: #0e1c36;
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   Footer
+======================================== */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #0e1c36;
+  color: #f1f1f1;
+  font-size: 0.9rem;
+}
+
+footer .brand {
+  color: #00c9a7;
+  font-weight: 600;
+}
+
+/* ========================================
+   Utilities & Animations
+======================================== */
+@keyframes fade-up {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out both;
+}
+
+/* Scroll-to-Top button (optional) */
+#scrollBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #00c9a7;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  border: none;
+  display: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+#scrollBtn:hover {
+  background-color: #00b293;
+}
