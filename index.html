@@ -3,28 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Eyesightworks | Website Developer & Brand Identity Expert" />
-  <meta name="keywords" content="web development, branding, digital design, UI/UX, Eyesightworks" />
-  <meta name="author" content="Eyesightworks" />
-  <meta property="og:title" content="Eyesightworks | Website Developer & Brand Identity Expert" />
-  <meta property="og:description" content="Crafting Brands. Building Digital Futures." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="images/og-image.png" />
-
+  <meta name="description" content="Eyesightworks | Website Developer & Brand Identity Expert">
   <title>Eyesightworks | Home</title>
 
-  <!-- Google Font: Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-
-  <!-- Main CSS -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-
-  <!-- Header -->
+  <!-- Navigation -->
   <header class="header">
     <div class="logo">Eyesightworks</div>
     <nav id="nav-menu" class="nav-menu">
@@ -38,16 +28,14 @@
         <option value="es">ES</option>
       </select>
     </nav>
-    <button class="hamburger" aria-label="Toggle Menu" onclick="toggleMenu()">☰</button>
+    <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">☰</button>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
     <h1>Hello, I'm a Website Developer & Brand Identity Expert</h1>
     <p class="tagline">Crafting Brands. Building Digital Futures.</p>
-    <a href="eyesightworks_business_card.pdf" class="download-btn" download>
-      📎 Download My Business Card
-    </a>
+    <a href="eyesightworks_business_card.pdf" class="download-btn" download>📎 Download My Business Card</a>
   </section>
 
   <!-- Footer -->
@@ -55,7 +43,7 @@
     <p>&copy; 2025 Eyesightworks. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript -->
+  <!-- JavaScript for Mobile Menu -->
   <script>
     function toggleMenu() {
       const menu = document.getElementById('nav-menu');
