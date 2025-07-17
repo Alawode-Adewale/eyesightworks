@@ -3,88 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Eyesightworks | Website Developer & Brand Identity Expert" />
-  <title>Eyesightworks | Home</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;800&display=swap" rel="stylesheet" />
-
-  <!-- CSS -->
+  <meta name="description" content="Eyesightworks | Web Developer, Brand Identity, Translator" />
+  <title>Eyesightworks | Web Developer & Brand Identity</title>
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <!-- Header / Navigation -->
   <header class="header">
     <div class="container nav-container">
       <div class="logo">Eyesightworks</div>
-      <nav id="nav-menu" class="nav-menu">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="contact.html">Contact</a>
-        <select id="lang-switcher" aria-label="Language Switcher">
-          <option value="en" selected>EN</option>
-          <option value="fr">FR</option>
-          <option value="es">ES</option>
-          <option value="ar">AR</option>
-        </select>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="active" data-en="Home" data-fr="Accueil" data-es="Inicio" data-ar="الرئيسية">Home</a>
+        <a href="about.html" data-en="About" data-fr="À propos" data-es="Sobre" data-ar="من نحن">About</a>
+        <a href="services.html" data-en="Services" data-fr="Services" data-es="Servicios" data-ar="الخدمات">Services</a>
+        <a href="portfolio.html" data-en="Portfolio" data-fr="Portfolio" data-es="Portafolio" data-ar="الأعمال">Portfolio</a>
+        <a href="testimonials.html" data-en="Testimonials" data-fr="Témoignages" data-es="Testimonios" data-ar="آراء العملاء">Testimonials</a>
+        <a href="contact.html" data-en="Contact" data-fr="Contact" data-es="Contacto" data-ar="اتصل بنا">Contact</a>
+        <button id="lang-switcher">FR</button>
       </nav>
-      <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">☰</button>
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-content">
-      <h1 id="hero-title">Crafting Brands. Building Digital Futures.</h1>
-      <p id="hero-subtitle">Website Developer & Brand Identity Expert</p>
-      <a href="eyesightworks_business_card.pdf" class="download-btn" download>📎 Download My Business Card</a>
+    <div class="container hero-content">
+      <h1 data-en="Elevate Your Brand with Eyesightworks"
+          data-fr="Élevez votre marque avec Eyesightworks"
+          data-es="Eleva tu marca con Eyesightworks"
+          data-ar="ارتقِ بعلامتك التجارية مع Eyesightworks">
+        Elevate Your Brand with Eyesightworks
+      </h1>
+      <p data-en="Web Developer | Brand Identity Expert | Translator"
+         data-fr="Développeur Web | Expert en Identité Visuelle | Traducteur"
+         data-es="Desarrollador Web | Experto en Identidad de Marca | Traductor"
+         data-ar="مطور ويب | خبير هوية العلامة التجارية | مترجم">
+        Web Developer | Brand Identity Expert | Translator
+      </p>
+      <a href="contact.html" class="download-btn"
+         data-en="Let's Talk" data-fr="Discutons" data-es="Hablemos" data-ar="تواصل معنا">Let's Talk</a>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 Eyesightworks. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript for Menu + Language Toggle -->
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById("nav-menu");
-      menu.classList.toggle("show");
-    }
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
+    const langSwitcher = document.getElementById("lang-switcher");
+    const html = document.documentElement;
 
-    const translations = {
-      en: {
-        heroTitle: "Crafting Brands. Building Digital Futures.",
-        heroSubtitle: "Website Developer & Brand Identity Expert"
-      },
-      fr: {
-        heroTitle: "Créer des marques. Construire des avenirs numériques.",
-        heroSubtitle: "Développeur de sites web et expert en identité de marque"
-      },
-      es: {
-        heroTitle: "Creando marcas. Construyendo futuros digitales.",
-        heroSubtitle: "Desarrollador web y experto en identidad de marca"
-      },
-      ar: {
-        heroTitle: "بناء العلامات التجارية. وصناعة المستقبل الرقمي.",
-        heroSubtitle: "مطور مواقع وخبير في الهوية البصرية"
-      }
-    };
+    hamburger.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
 
-    document.getElementById("lang-switcher").addEventListener("change", function () {
-      const lang = this.value;
-      document.getElementById("hero-title").textContent = translations[lang].heroTitle;
-      document.getElementById("hero-subtitle").textContent = translations[lang].heroSubtitle;
-      document.documentElement.lang = lang;
-      document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    const languages = ["en", "fr", "es", "ar"];
+    let currentLangIndex = 0;
+
+    langSwitcher.addEventListener("click", () => {
+      currentLangIndex = (currentLangIndex + 1) % languages.length;
+      const lang = languages[currentLangIndex];
+      html.lang = lang;
+      html.dir = lang === "ar" ? "rtl" : "ltr";
+      langSwitcher.textContent = lang.toUpperCase();
+
+      document.querySelectorAll("[data-" + lang + "]").forEach(el => {
+        el.textContent = el.getAttribute("data-" + lang);
+      });
     });
   </script>
 </body>
