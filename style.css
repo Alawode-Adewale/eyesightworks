@@ -1,5 +1,5 @@
 /* ========================================
-   Global Reset & Base Styles
+   Base Reset & Global Styles
 ======================================== */
 * {
   margin: 0;
@@ -39,15 +39,6 @@ button {
 }
 
 /* ========================================
-   Typography
-======================================== */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  color: #0e1c36;
-}
-
-/* ========================================
    Header & Navigation
 ======================================== */
 .header {
@@ -62,8 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo {
   font-size: 1.6rem;
-  font-weight: 800;
-  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 
 .nav-menu {
@@ -88,15 +78,16 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.9rem;
   background-color: #fff;
   color: #0e1c36;
-  border: none;
 }
 
+/* Hamburger Menu */
 .hamburger {
   display: none;
   font-size: 1.8rem;
   color: #fff;
 }
 
+/* Mobile Nav */
 @media (max-width: 768px) {
   .nav-menu {
     display: none;
@@ -121,29 +112,55 @@ h1, h2, h3, h4, h5, h6 {
 ======================================== */
 .hero {
   background: linear-gradient(135deg, #00c9a7, #92fe9d);
-  color: #0e1c36;
+  color: #fff;
   padding: 4rem 2rem;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   margin-bottom: 1rem;
+  font-weight: 800;
 }
 
-.tagline {
+.hero .tagline {
   font-size: 1.2rem;
-  font-style: italic;
+  color: #eafff7;
   margin-bottom: 2rem;
-  color: #0e1c36;
 }
 
 /* ========================================
-   Download Button
+   Sections
 ======================================== */
+section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #0e1c36;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+section p {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+/* ========================================
+   Buttons
+======================================== */
+.btn,
 .download-btn {
   display: inline-block;
-  background-color: #0e1c36;
+  background-color: #00c9a7;
   color: #fff;
   padding: 0.75rem 1.5rem;
   border-radius: 6px;
@@ -151,9 +168,9 @@ h1, h2, h3, h4, h5, h6 {
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
+.btn:hover,
 .download-btn:hover {
-  background-color: #00c9a7;
-  color: #0e1c36;
+  background-color: #00b293;
   transform: translateY(-2px);
 }
 
@@ -162,19 +179,36 @@ h1, h2, h3, h4, h5, h6 {
 ======================================== */
 footer {
   text-align: center;
-  padding: 1.5rem;
+  padding: 2rem;
   background-color: #0e1c36;
-  color: #f1f1f1;
+  color: #fff;
   font-size: 0.9rem;
 }
 
-footer .brand {
-  color: #00c9a7;
-  font-weight: 600;
+/* ========================================
+   Scroll-to-Top Button
+======================================== */
+#scrollBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #00c9a7;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 1000;
+}
+
+#scrollBtn:hover {
+  background-color: #00b293;
 }
 
 /* ========================================
-   Utilities & Animations
+   Animations
 ======================================== */
 @keyframes fade-up {
   from {
@@ -189,24 +223,4 @@ footer .brand {
 
 .animate-fade-up {
   animation: fade-up 0.8s ease-out both;
-}
-
-/* Scroll-to-Top button (optional) */
-#scrollBtn {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  background-color: #00c9a7;
-  color: #fff;
-  padding: 0.6rem 1rem;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  border: none;
-  display: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-}
-
-#scrollBtn:hover {
-  background-color: #00b293;
 }
