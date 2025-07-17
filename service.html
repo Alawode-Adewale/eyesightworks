@@ -3,75 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Explore services by Eyesightworks – Web Development, Branding, and Visual Design." />
-  <meta name="author" content="Eyesightworks" />
+  <meta name="description" content="Eyesightworks | Web Development and Branding Services">
   <title>Services | Eyesightworks</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- Header -->
   <header class="header">
-    <div class="logo">Eyesightworks</div>
-    <nav id="nav-menu" class="nav-menu">
-      <a href="index.html">Home</a>
-      <a href="service.html" class="active">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="contact.html">Contact</a>
-      <select class="language-switcher" aria-label="Language switcher">
-        <option value="#">EN</option>
-        <option value="#">FR</option>
-        <option value="#">ES</option>
-      </select>
-    </nav>
-    <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+    <div class="container nav-container">
+      <div class="logo">Eyesightworks</div>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <nav class="nav" id="nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Services Hero -->
-  <section class="hero hero-service">
-    <h1>What We Offer</h1>
-    <p class="tagline">Professional services tailored to grow your business online and offline.</p>
+  <!-- Services Section -->
+  <section class="services-section">
+    <div class="container">
+      <h1>What I Do</h1>
+      <div class="service-list">
+        <div class="service-card">
+          <h2>Website Development</h2>
+          <p>Responsive, fast-loading, and SEO-optimized websites tailored to your needs — built with modern web standards.</p>
+        </div>
+
+        <div class="service-card">
+          <h2>Brand Identity Design</h2>
+          <p>Complete visual branding solutions — including logos, typography, color palettes, and brand guidelines.</p>
+        </div>
+
+        <div class="service-card">
+          <h2>UI/UX Design</h2>
+          <p>Intuitive and beautiful user experiences, wireframes, prototypes, and interface designs that convert.</p>
+        </div>
+
+        <div class="service-card">
+          <h2>Business Cards & Stationery</h2>
+          <p>Professional business card and print design services that extend your brand beyond digital platforms.</p>
+        </div>
+
+        <div class="service-card">
+          <h2>Website Maintenance</h2>
+          <p>Ongoing support, updates, and troubleshooting to keep your website running smoothly 24/7.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Services Grid -->
-  <main class="services-section">
-    <div class="service-card">
-      <img src="images/web-dev.svg" alt="Web Development Icon" />
-      <h3>Website Development</h3>
-      <p>Custom-coded responsive websites built for performance, SEO, and scalability.</p>
-    </div>
-    <div class="service-card">
-      <img src="images/branding.svg" alt="Brand Identity Icon" />
-      <h3>Brand Identity</h3>
-      <p>Logo design, typography, color systems, and complete brand guidelines.</p>
-    </div>
-    <div class="service-card">
-      <img src="images/uiux.svg" alt="UI/UX Design Icon" />
-      <h3>UI/UX Design</h3>
-      <p>Intuitive and engaging designs for websites, apps, and digital experiences.</p>
-    </div>
-    <div class="service-card">
-      <img src="images/seo.svg" alt="SEO Icon" />
-      <h3>SEO & Optimization</h3>
-      <p>Technical SEO, speed optimization, and content strategies for visibility.</p>
-    </div>
-  </main>
-
   <!-- Footer -->
-  <footer>
+  <footer class="footer">
     <p>&copy; 2025 Eyesightworks. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript -->
+  <!-- JavaScript for Menu -->
   <script>
     function toggleMenu() {
-      const menu = document.getElementById('nav-menu');
-      menu.classList.toggle('show');
+      document.getElementById("nav").classList.toggle("nav-open");
     }
   </script>
 
