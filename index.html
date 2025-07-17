@@ -4,59 +4,61 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Eyesightworks | Website Developer & Brand Identity Expert" />
+  <meta name="author" content="Eyesightworks" />
+
+  <!-- Open Graph for social media -->
+  <meta property="og:title" content="Eyesightworks | Website Developer & Brand Identity Expert" />
+  <meta property="og:description" content="Crafting Brands. Building Digital Futures." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/estate-mockup.jpg" />
+
+  <!-- Theme color for browsers -->
+  <meta name="theme-color" content="#0e1c36" />
+
   <title>Eyesightworks | Home</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Header / Navigation -->
   <header class="header">
     <div class="logo">Eyesightworks</div>
-    <nav id="nav-menu" class="nav-menu">
+    <button class="hamburger" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
+    <nav id="nav-menu" class="nav-menu" aria-label="Main navigation">
       <a href="index.html" class="active">Home</a>
       <a href="service.html">Services</a>
       <a href="portfolio.html">Portfolio</a>
       <a href="contact.html">Contact</a>
-      <select class="language-switcher" aria-label="Language Switcher">
+      <label for="language-switcher" class="visually-hidden">Choose language</label>
+      <select id="language-switcher" class="language-switcher" aria-label="Language switcher">
         <option value="en">EN</option>
         <option value="fr">FR</option>
         <option value="es">ES</option>
       </select>
     </nav>
-    <button class="hamburger" aria-label="Toggle Navigation" onclick="toggleMenu()">☰</button>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Hello, I'm a Website Developer & Brand Identity Expert</h1>
-    <p class="tagline">Crafting Brands. Building Digital Futures.</p>
-    <a href="eyesightworks_business_card.pdf" class="download-btn" download>📎 Download My Business Card</a>
-  </section>
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero animate-fade-up">
+      <h1>Hello, I'm a Website Developer & Brand Identity Expert</h1>
+      <p class="tagline">Crafting Brands. Building Digital Futures.</p>
+      <a href="assets/eyesightworks_business_card.pdf" class="download-btn" download>
+        📎 Download My Business Card
+      </a>
+    </section>
+  </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Eyesightworks. All rights reserved.</p>
-  </footer>
+  <!-- Scroll-to-Top Button -->
+  <button onclick="scrollToTop()" id="scrollBtn" title="Back to top">↑</button>
 
-  <!-- Scroll to Top Button (Optional if using JS) -->
-  <button id="scrollBtn" onclick="scrollToTop()" title="Go to top">↑</button>
-
-  <!-- JavaScript -->
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('nav-menu');
-      menu.classList.toggle('show');
-    }
-
-    window.onscroll = function () {
-      const scrollBtn = document.getElementById("scrollBtn");
-      scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
-    };
-
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  </script>
-</body>
-</html>
+  <
