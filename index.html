@@ -1,68 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Eyesightworks | Web Developer & Brand Identity Expert">
-  <title>Eyesightworks | Web Developer & Brand Identity</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
-  
-  <!-- External CSS -->
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Eyesightworks | Website Developer & Brand Identity Expert" />
+  <title>Eyesightworks | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/favicon.ico" />
 </head>
-<body>
 
-  <!-- Header -->
+<body>
+  <!-- Language Toggle -->
+  <div class="lang-switcher">
+    <select id="languageSelect" onchange="switchLanguage()">
+      <option value="en">EN</option>
+      <option value="fr">FR</option>
+      <option value="es">ES</option>
+      <option value="ar">AR</option>
+    </select>
+  </div>
+
+  <!-- Header / Navbar -->
   <header class="header">
-    <div class="container nav-container">
+    <div class="container">
       <div class="logo">Eyesightworks</div>
-      <button class="hamburger" onclick="toggleMenu()">☰</button>
-      <nav class="nav" id="nav">
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <nav id="nav-menu" class="nav-menu">
+        <a href="index.html" class="nav-link" data-key="home">Home</a>
+        <a href="about.html" class="nav-link" data-key="about">About</a>
+        <a href="services.html" class="nav-link" data-key="services">Services</a>
+        <a href="portfolio.html" class="nav-link" data-key="portfolio">Portfolio</a>
+        <a href="testimonials.html" class="nav-link" data-key="testimonials">Testimonials</a>
+        <a href="contact.html" class="nav-link" data-key="contact">Contact</a>
       </nav>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-      <h1>Creative Web Development & Brand Strategy</h1>
-      <p class="tagline">Helping your brand stand out through elegant, accessible, and fast digital solutions.</p>
-      <a href="contact.html" class="btn-primary">Let’s Work Together</a>
+      <h1 data-key="hero_title">Crafting Digital Futures with Design & Code</h1>
+      <p data-key="hero_subtitle">Website Developer & Brand Identity Expert</p>
+      <a href="contact.html" class="btn-primary" data-key="cta">Let's Work Together</a>
     </div>
   </section>
 
-  <!-- Contact Form Section -->
-  <section class="contact-form">
-    <h2>Get in Touch</h2>
-    <form action="#" method="POST">
-      <input type="text" name="name" placeholder="Full Name" required />
-      <input type="email" name="email" placeholder="Email Address" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
   <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 Eyesightworks. All rights reserved.</p>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Eyesightworks. <span data-key="rights">All rights reserved.</span></p>
+    </div>
   </footer>
 
-  <!-- JavaScript for Menu Toggle -->
+  <!-- Language Script -->
   <script>
+    const translations = {
+      en: {
+        home: "Home",
+        about: "About",
+        services: "Services",
+        portfolio: "Portfolio",
+        testimonials: "Testimonials",
+        contact: "Contact",
+        hero_title: "Crafting Digital Futures with Design & Code",
+        hero_subtitle: "Website Developer & Brand Identity Expert",
+        cta: "Let's Work Together",
+        rights: "All rights reserved."
+      },
+      fr: {
+        home: "Accueil",
+        about: "À propos",
+        services: "Services",
+        portfolio: "Portfolio",
+        testimonials: "Témoignages",
+        contact: "Contact",
+        hero_title: "Créer des futurs numériques avec design et code",
+        hero_subtitle: "Développeur Web & Expert en Identité Visuelle",
+        cta: "Travaillons ensemble",
+        rights: "Tous droits réservés."
+      },
+      es: {
+        home: "Inicio",
+        about: "Acerca de",
+        services: "Servicios",
+        portfolio: "Portafolio",
+        testimonials: "Testimonios",
+        contact: "Contacto",
+        hero_title: "Creando futuros digitales con diseño y código",
+        hero_subtitle: "Desarrollador web y experto en identidad de marca",
+        cta: "Trabajemos juntos",
+        rights: "Todos los derechos reservados."
+      },
+      ar: {
+        home: "الرئيسية",
+        about: "من نحن",
+        services: "الخدمات",
+        portfolio: "الأعمال",
+        testimonials: "آراء العملاء",
+        contact: "اتصل بنا",
+        hero_title: "نبني مستقبلًا رقميًا بالتصميم والبرمجة",
+        hero_subtitle: "مطور مواقع وخبير في الهوية البصرية",
+        cta: "دعنا نبدأ العمل",
+        rights: "جميع الحقوق محفوظة."
+      }
+    };
+
+    function switchLanguage() {
+      const selectedLang = document.getElementById("languageSelect").value;
+      document.documentElement.lang = selectedLang;
+      document.documentElement.dir = selectedLang === "ar" ? "rtl" : "ltr";
+
+      document.querySelectorAll("[data-key]").forEach(el => {
+        const key = el.getAttribute("data-key");
+        if (translations[selectedLang][key]) {
+          el.textContent = translations[selectedLang][key];
+        }
+      });
+    }
+
     function toggleMenu() {
-      document.getElementById("nav").classList.toggle("nav-open");
+      document.getElementById("nav-menu").classList.toggle("show");
     }
   </script>
-
 </body>
 </html>
