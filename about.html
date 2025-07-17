@@ -3,22 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="About Eyesightworks - Website Developer & Brand Identity Expert">
+  <meta name="description" content="About Eyesightworks - Web Developer & Brand Identity Expert" />
   <title>About | Eyesightworks</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <!-- Header -->
   <header class="header">
-    <div class="container nav-container">
-      <div class="logo">Eyesightworks</div>
-      <button class="hamburger" onclick="toggleMenu()">☰</button>
-      <nav class="nav" id="nav">
-        <ul class="nav-links">
-          <li><a
+    <div class="logo">Eyesightworks</div>
+    <nav id="nav-menu" class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
+      <select class="language-switcher" aria-label="Language switcher" onchange="changeLanguage(this.value)">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="es">ES</option>
+        <option value="ar">AR</option>
+      </select>
+    </nav>
+    <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <!-- About Section -->
+  <section class="page-section about-section">
+    <div class="container">
+      <h1 data-en="About Me" data-fr="À propos de moi" data-es="Sobre mí" data-ar="عنّي">About Me</h1>
+      <p data-en="Eyesightworks is a creative web development and brand identity agency helping clients around the world launch beautiful, effective digital experiences."
+         data-fr="Eyesightworks est une agence de développement web et d'identité de marque qui aide les clients du monde entier à lancer des expériences numériques efficaces."
+         data-es="Eyesightworks es una agencia de desarrollo web e identidad de marca que ayuda a los clientes de todo el mundo a lanzar experiencias digitales efectivas."
+         data-ar="Eyesightworks هي وكالة لتطوير الويب وهوية العلامة التجارية تساعد العملاء حول العالم على إطلاق تجارب رقمية فعالة.">
+         Eyesightworks is a creative web development and brand identity agency helping clients around the world launch beautiful, effective digital experiences.
+      </p>
+      <p data-en="With a passion for design, code, and storytelling, I combine strategy and creativity to build strong personal and business brands online."
+         data-fr="Avec une passion pour le design, le code et la narration, je combine stratégie et créativité pour construire des marques solides en ligne."
+         data-es="Con pasión por el diseño, el código y la narración, combino estrategia y creatividad para construir marcas personales y empresariales sólidas."
+         data-ar="بشغف بالتصميم والبرمجة وسرد القصص، أدمج الاستراتيجية والإبداع لبناء علامات تجارية قوية على الإنترنت.">
+         With a passion for design, code, and storytelling, I combine strategy and creativity to build strong personal and business brands online.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Eyesightworks. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("nav-menu");
+      menu.classList.toggle("show");
+    }
+
+    function changeLanguage(lang) {
+      const elements = document.querySelectorAll("[data-" + lang + "]");
+      elements.forEach(el => {
+        el.textContent = el.getAttribute("data-" + lang);
+      });
+    }
+  </script>
+</body>
+</html>
