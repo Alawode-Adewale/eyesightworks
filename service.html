@@ -3,79 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Eyesightworks | Web Development and Branding Services">
+  <meta name="description" content="Our Services - Eyesightworks" />
   <title>Services | Eyesightworks</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <!-- Header -->
   <header class="header">
-    <div class="container nav-container">
-      <div class="logo">Eyesightworks</div>
-      <button class="hamburger" onclick="toggleMenu()">☰</button>
-      <nav class="nav" id="nav">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html" class="active">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+    <div class="logo">Eyesightworks</div>
+    <nav id="nav-menu" class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
+      <select class="language-switcher" aria-label="Language switcher" onchange="changeLanguage(this.value)">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="es">ES</option>
+        <option value="ar">AR</option>
+      </select>
+    </nav>
+    <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">☰</button>
   </header>
 
   <!-- Services Section -->
-  <section class="services-section">
+  <section class="page-section services-section">
     <div class="container">
-      <h1>What I Do</h1>
-      <div class="service-list">
-        <div class="service-card">
-          <h2>Website Development</h2>
-          <p>Responsive, fast-loading, and SEO-optimized websites tailored to your needs — built with modern web standards.</p>
-        </div>
-
-        <div class="service-card">
-          <h2>Brand Identity Design</h2>
-          <p>Complete visual branding solutions — including logos, typography, color palettes, and brand guidelines.</p>
-        </div>
-
-        <div class="service-card">
-          <h2>UI/UX Design</h2>
-          <p>Intuitive and beautiful user experiences, wireframes, prototypes, and interface designs that convert.</p>
-        </div>
-
-        <div class="service-card">
-          <h2>Business Cards & Stationery</h2>
-          <p>Professional business card and print design services that extend your brand beyond digital platforms.</p>
-        </div>
-
-        <div class="service-card">
-          <h2>Website Maintenance</h2>
-          <p>Ongoing support, updates, and troubleshooting to keep your website running smoothly 24/7.</p>
-        </div>
-      </div>
+      <h1 data-en="Our Services" data-fr="Nos Services" data-es="Nuestros Servicios" data-ar="خدماتنا">Our Services</h1>
+      <ul class="service-list">
+        <li data-en="🌐 Web Development – Custom, responsive, and fast-loading websites using the latest technologies."
+            data-fr="🌐 Développement Web – Sites personnalisés, réactifs et rapides avec les dernières technologies."
+            data-es="🌐 Desarrollo Web – Sitios personalizados, receptivos y rápidos con las últimas tecnologías."
+            data-ar="🌐 تطوير الويب – مواقع مخصصة وسريعة الاستجابة باستخدام أحدث التقنيات.">
+            🌐 Web Development – Custom, responsive, and fast-loading websites using the latest technologies.
+        </li>
+        <li data-en="🎨 Brand Identity – Professional logo design, color palette, typography and complete brand style guides."
+            data-fr="🎨 Identité de Marque – Logos professionnels, palettes de couleurs et guides de style complets."
+            data-es="🎨 Identidad de Marca – Diseño de logotipos, paletas de colores y guías de estilo completas."
+            data-ar="🎨 الهوية البصرية – تصميم شعار احترافي، ألوان وخطوط ودليل شامل للهوية.">
+            🎨 Brand Identity – Professional logo design, color palette, typography and complete brand style guides.
+        </li>
+        <li data-en="🌍 Language Translation – Website & content translation in English, French, Spanish, and Arabic."
+            data-fr="🌍 Traduction – Traduction de sites web et de contenu en anglais, français, espagnol et arabe."
+            data-es="🌍 Traducción – Traducción de sitios web y contenido en inglés, francés, español y árabe."
+            data-ar="🌍 الترجمة – ترجمة المواقع والمحتوى إلى الإنجليزية، الفرنسية، الإسبانية والعربية.">
+            🌍 Language Translation – Website & content translation in English, French, Spanish, and Arabic.
+        </li>
+        <li data-en="📈 SEO Optimization – Improve your site’s ranking on search engines with tailored SEO strategies."
+            data-fr="📈 Optimisation SEO – Améliorez votre référencement grâce à des stratégies SEO sur mesure."
+            data-es="📈 Optimización SEO – Mejore su clasificación en buscadores con estrategias personalizadas."
+            data-ar="📈 تحسين محركات البحث – رفع ترتيب موقعك بخطط مخصصة لتحسين محركات البحث.">
+            📈 SEO Optimization – Improve your site’s ranking on search engines with tailored SEO strategies.
+        </li>
+      </ul>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer>
     <p>&copy; 2025 Eyesightworks. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript for Menu -->
+  <!-- Scripts -->
   <script>
     function toggleMenu() {
-      document.getElementById("nav").classList.toggle("nav-open");
+      const menu = document.getElementById("nav-menu");
+      menu.classList.toggle("show");
+    }
+
+    function changeLanguage(lang) {
+      const elements = document.querySelectorAll("[data-" + lang + "]");
+      elements.forEach(el => {
+        el.textContent = el.getAttribute("data-" + lang);
+      });
     }
   </script>
-
 </body>
 </html>
