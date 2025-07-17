@@ -1,89 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Eyesightworks | Portfolio">
+  <meta name="description" content="Portfolio - Eyesightworks Projects and Work Showcase" />
   <title>Portfolio | Eyesightworks</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;800&display=swap" rel="stylesheet" />
 </head>
-
 <body>
+  <!-- Header -->
   <header class="header">
     <div class="logo">Eyesightworks</div>
-    <nav class="nav-menu" id="navMenu">
-      <a href="index.html" data-en="Home" data-fr="Accueil" data-ar="الرئيسية" data-es="Inicio">Home</a>
-      <a href="about.html" data-en="About" data-fr="À propos" data-ar="من نحن" data-es="Acerca">About</a>
-      <a href="services.html" data-en="Services" data-fr="Services" data-ar="الخدمات" data-es="Servicios">Services</a>
-      <a href="portfolio.html" class="active" data-en="Portfolio" data-fr="Portfolio" data-ar="أعمالنا" data-es="Portafolio">Portfolio</a>
-      <a href="testimonials.html" data-en="Testimonials" data-fr="Témoignages" data-ar="الآراء" data-es="Testimonios">Testimonials</a>
-      <a href="contact.html" data-en="Contact" data-fr="Contact" data-ar="اتصل بنا" data-es="Contacto">Contact</a>
+    <nav id="nav-menu" class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html" class="active">Portfolio</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
+      <select class="language-switcher" aria-label="Language switcher" onchange="changeLanguage(this.value)">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="es">ES</option>
+        <option value="ar">AR</option>
+      </select>
     </nav>
-    <button class="hamburger" id="hamburger">&#9776;</button>
-    <select class="language-switcher" id="languageSwitcher">
-      <option value="en">EN</option>
-      <option value="fr">FR</option>
-      <option value="ar">AR</option>
-      <option value="es">ES</option>
-    </select>
+    <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">☰</button>
   </header>
 
-  <section class="hero">
-    <h1 data-en="Our Portfolio" data-fr="Notre Portfolio" data-ar="محفظة أعمالنا" data-es="Nuestro Portafolio">Our Portfolio</h1>
-    <p data-en="See some of our proudest digital projects." data-fr="Découvrez nos meilleurs projets." data-ar="اكتشف أبرز مشاريعنا الرقمية" data-es="Mira nuestros mejores proyectos digitales.">See some of our proudest digital projects.</p>
-  </section>
+  <!-- Portfolio Section -->
+  <section class="page-section portfolio-section">
+    <div class="container">
+      <h1 data-en="Portfolio" data-fr="Portfolio" data-es="Portafolio" data-ar="أعمالنا">Portfolio</h1>
+      <p class="section-description"
+         data-en="A showcase of our most impactful and creative projects."
+         data-fr="Une vitrine de nos projets les plus percutants et créatifs."
+         data-es="Una muestra de nuestros proyectos más impactantes y creativos."
+         data-ar="عرض لأبرز مشاريعنا الإبداعية.">
+         A showcase of our most impactful and creative projects.
+      </p>
 
-  <section class="portfolio-section">
-    <div class="portfolio-grid">
-      <div class="card">
-        <img src="images/project1.jpg" alt="Project 1">
-        <div class="card-body">
-          <h3>Creative Brand Launch</h3>
-          <p>Visual identity and custom site for a growing startup.</p>
+      <div class="portfolio-grid">
+        <!-- Project 1 -->
+        <div class="card">
+          <img src="https://via.placeholder.com/400x220" alt="Project 1" />
+          <div class="card-body">
+            <h3>Vision Brand Website</h3>
+            <p>A full website redesign for a luxury brand identity agency.</p>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="images/project2.jpg" alt="Project 2">
-        <div class="card-body">
-          <h3>Business Landing Page</h3>
-          <p>Modern, fast, and conversion-focused landing experience.</p>
+        <!-- Project 2 -->
+        <div class="card">
+          <img src="https://via.placeholder.com/400x220" alt="Project 2" />
+          <div class="card-body">
+            <h3>Global Translate App</h3>
+            <p>Multilingual UI/UX for a mobile translation application.</p>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="images/project3.jpg" alt="Project 3">
-        <div class="card-body">
-          <h3>eCommerce Redesign</h3>
-          <p>Full UX/UI revamp for better product discovery and trust.</p>
+        <!-- Project 3 -->
+        <div class="card">
+          <img src="https://via.placeholder.com/400x220" alt="Project 3" />
+          <div class="card-body">
+            <h3>Creative Agency Site</h3>
+            <p>Responsive, animated site for a modern design agency.</p>
+          </div>
         </div>
+        <!-- Add more cards as needed -->
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Eyesightworks. All rights reserved.</p>
   </footer>
 
+  <!-- Scripts -->
   <script>
-    // Hamburger toggle
-    document.getElementById('hamburger').addEventListener('click', function () {
-      document.getElementById('navMenu').classList.toggle('show');
-    });
+    function toggleMenu() {
+      const menu = document.getElementById("nav-menu");
+      menu.classList.toggle("show");
+    }
 
-    // Language Switcher
-    document.getElementById('languageSwitcher').addEventListener('change', function () {
-      const lang = this.value;
-      document.querySelectorAll('[data-' + lang + ']').forEach(el => {
-        el.textContent = el.getAttribute('data-' + lang);
-        if (lang === 'ar') {
-          document.body.style.direction = 'rtl';
-        } else {
-          document.body.style.direction = 'ltr';
-        }
+    function changeLanguage(lang) {
+      const elements = document.querySelectorAll("[data-" + lang + "]");
+      elements.forEach(el => {
+        el.textContent = el.getAttribute("data-" + lang);
       });
-    });
+    }
   </script>
 </body>
-
 </html>
