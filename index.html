@@ -23,3 +23,37 @@
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="testimonials.html">Testimonials</a></li>
           <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Website Developer & Brand Identity Expert</h1>
+      <p class="tagline">Crafting Brands. Building Digital Futures.</p>
+      <a href="assets/eyesightworks_card.pdf" class="btn-primary" download>📎 Download Business Card</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Eyesightworks. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('nav-open');
+    });
+  </script>
+
+</body>
+</html>
