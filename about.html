@@ -7,19 +7,37 @@
   <title>About | Eyesightworks</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    /* Minimal fallback styles for demonstration (adjust in style.css) */
+    .nav-menu { display: none; }
+    .nav-menu.show { display: block; }
+    .language-switcher { margin-left: 1rem; }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
   <header class="header">
     <div class="logo">Eyesightworks</div>
-    <nav id="nav-menu" class="nav-menu">
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="contact.html">Contact</a>
-      <select class="language-switcher" aria-label="Language switcher" onchange="changeLanguage(this.value)">
+    <nav id="nav-menu" class="nav-menu" role="navigation">
+      <a href="index.html" data-en="Home" data-fr="Accueil" data-es="Inicio" data-ar="الرئيسية">Home</a>
+      <a href="about.html" class="active" data-en="About" data-fr="À propos" data-es="Sobre mí" data-ar="عنّي">About</a>
+      <a href="services.html" data-en="Services" data-fr="Services" data-es="Servicios" data-ar="الخدمات">Services</a>
+      <a href="portfolio.html" data-en="Portfolio" data-fr="Portfolio" data-es="Portafolio" data-ar="الأعمال">Portfolio</a>
+      <a href="testimonials.html" data-en="Testimonials" data-fr="Témoignages" data-es="Testimonios" data-ar="آراء العملاء">Testimonials</a>
+      <a href="contact.html" data-en="Contact" data-fr="Contact" data-es="Contacto" data-ar="اتصل بنا">Contact</a>
+
+      <label for="lang" class="sr-only">Select language</label>
+      <select id="lang" class="language-switcher" aria-label="Language switcher" onchange="changeLanguage(this.value)">
         <option value="en">EN</option>
         <option value="fr">FR</option>
         <option value="es">ES</option>
@@ -50,7 +68,12 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Eyesightworks. All rights reserved.</p>
+    <p data-en="&copy; 2025 Eyesightworks. All rights reserved."
+       data-fr="&copy; 2025 Eyesightworks. Tous droits réservés."
+       data-es="&copy; 2025 Eyesightworks. Todos los derechos reservados."
+       data-ar="&copy; 2025 Eyesightworks. جميع الحقوق محفوظة.">
+      &copy; 2025 Eyesightworks. All rights reserved.
+    </p>
   </footer>
 
   <!-- Scripts -->
@@ -65,7 +88,15 @@
       elements.forEach(el => {
         el.textContent = el.getAttribute("data-" + lang);
       });
+      localStorage.setItem('preferredLang', lang);
     }
+
+    // Load preferred language from localStorage if available
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('preferredLang') || 'en';
+      document.getElementById('lang').value = savedLang;
+      changeLanguage(savedLang);
+    });
   </script>
 </body>
 </html>
