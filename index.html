@@ -8,20 +8,43 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
   <style>
-    /* Ensure nav menu toggling works */
-    .nav-menu { display: none; }
-    .nav-menu.show { display: block; }
+    /* Minimal fallback */
+    .nav-menu {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
 
-    /* Optional: direction-aware spacing (if needed) */
-    [dir="rtl"] .nav-menu a {
-      text-align: right;
+    .hamburger {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+      }
+
+      .nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .nav-menu.show {
+        display: flex;
+      }
     }
 
     .lang-switcher-button {
       background: none;
       border: 1px solid #ccc;
-      padding: 0.5em 1em;
+      padding: 0.4em 0.8em;
       cursor: pointer;
+      border-radius: 4px;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -80,7 +103,7 @@
     const languages = ["en", "fr", "es", "ar"];
     let currentLangIndex = 0;
 
-    // Load saved language if exists
+    // Load saved language
     document.addEventListener("DOMContentLoaded", () => {
       const savedLang = localStorage.getItem("preferredLang");
       if (savedLang && languages.includes(savedLang)) {
