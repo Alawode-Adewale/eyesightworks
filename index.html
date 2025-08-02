@@ -7,21 +7,38 @@
   <title>Eyesightworks | Web Developer & Brand Identity</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    /* Ensure nav menu toggling works */
+    .nav-menu { display: none; }
+    .nav-menu.show { display: block; }
+
+    /* Optional: direction-aware spacing (if needed) */
+    [dir="rtl"] .nav-menu a {
+      text-align: right;
+    }
+
+    .lang-switcher-button {
+      background: none;
+      border: 1px solid #ccc;
+      padding: 0.5em 1em;
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body>
   <header class="header">
     <div class="container nav-container">
       <div class="logo">Eyesightworks</div>
-      <button class="hamburger" id="hamburger">&#9776;</button>
-      <nav class="nav-menu" id="nav-menu">
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">&#9776;</button>
+      <nav class="nav-menu" id="nav-menu" role="navigation">
         <a href="index.html" class="active" data-en="Home" data-fr="Accueil" data-es="Inicio" data-ar="الرئيسية">Home</a>
         <a href="about.html" data-en="About" data-fr="À propos" data-es="Sobre" data-ar="من نحن">About</a>
         <a href="services.html" data-en="Services" data-fr="Services" data-es="Servicios" data-ar="الخدمات">Services</a>
         <a href="portfolio.html" data-en="Portfolio" data-fr="Portfolio" data-es="Portafolio" data-ar="الأعمال">Portfolio</a>
         <a href="testimonials.html" data-en="Testimonials" data-fr="Témoignages" data-es="Testimonios" data-ar="آراء العملاء">Testimonials</a>
         <a href="contact.html" data-en="Contact" data-fr="Contact" data-es="Contacto" data-ar="اتصل بنا">Contact</a>
-        <button id="lang-switcher">FR</button>
+        <button id="lang-switcher" class="lang-switcher-button" aria-label="Switch language">FR</button>
       </nav>
     </div>
   </header>
@@ -46,7 +63,12 @@
   </section>
 
   <footer class="footer">
-    <p>&copy; 2025 Eyesightworks. All rights reserved.</p>
+    <p data-en="&copy; 2025 Eyesightworks. All rights reserved."
+       data-fr="&copy; 2025 Eyesightworks. Tous droits réservés."
+       data-es="&copy; 2025 Eyesightworks. Todos los derechos reservados."
+       data-ar="&copy; 2025 Eyesightworks. جميع الحقوق محفوظة.">
+      &copy; 2025 Eyesightworks. All rights reserved.
+    </p>
   </footer>
 
   <script>
@@ -55,16 +77,30 @@
     const langSwitcher = document.getElementById("lang-switcher");
     const html = document.documentElement;
 
+    const languages = ["en", "fr", "es", "ar"];
+    let currentLangIndex = 0;
+
+    // Load saved language if exists
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedLang = localStorage.getItem("preferredLang");
+      if (savedLang && languages.includes(savedLang)) {
+        currentLangIndex = languages.indexOf(savedLang);
+        switchLanguage(savedLang);
+      }
+    });
+
     hamburger.addEventListener("click", () => {
       navMenu.classList.toggle("show");
     });
 
-    const languages = ["en", "fr", "es", "ar"];
-    let currentLangIndex = 0;
-
     langSwitcher.addEventListener("click", () => {
       currentLangIndex = (currentLangIndex + 1) % languages.length;
-      const lang = languages[currentLangIndex];
+      const newLang = languages[currentLangIndex];
+      switchLanguage(newLang);
+      localStorage.setItem("preferredLang", newLang);
+    });
+
+    function switchLanguage(lang) {
       html.lang = lang;
       html.dir = lang === "ar" ? "rtl" : "ltr";
       langSwitcher.textContent = lang.toUpperCase();
@@ -72,7 +108,7 @@
       document.querySelectorAll("[data-" + lang + "]").forEach(el => {
         el.textContent = el.getAttribute("data-" + lang);
       });
-    });
+    }
   </script>
 </body>
 </html>
