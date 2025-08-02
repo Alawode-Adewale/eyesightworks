@@ -104,7 +104,6 @@
     const languages = ["en", "fr", "es", "ar"];
     let currentLangIndex = 0;
 
-    // Load preferred language if available
     document.addEventListener("DOMContentLoaded", () => {
       const savedLang = localStorage.getItem("preferredLang");
       if (savedLang && languages.includes(savedLang)) {
