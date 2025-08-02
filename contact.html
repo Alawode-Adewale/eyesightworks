@@ -1,69 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact Eyesightworks for web development and brand identity services">
+  <meta name="description" content="Contact Eyesightworks – Let’s Work Together" />
   <title>Contact | Eyesightworks</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    .contact-form {
+      margin-top: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: inherit;
+    }
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles.css" />
+    .contact-form button {
+      padding: 0.8rem 1.5rem;
+      background-color: #2a2a2a;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #444;
+    }
+  </style>
 </head>
-<body>
 
+<body>
   <!-- Header -->
   <header class="header">
     <div class="container nav-container">
       <div class="logo">Eyesightworks</div>
-      <button class="hamburger" onclick="toggleMenu()">☰</button>
-      <nav class="nav" id="nav">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">&#9776;</button>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" data-en="Home" data-fr="Accueil" data-es="Inicio" data-ar="الرئيسية">Home</a>
+        <a href="about.html" data-en="About" data-fr="À propos" data-es="Sobre" data-ar="من نحن">About</a>
+        <a href="services.html" data-en="Services" data-fr="Services" data-es="Servicios" data-ar="الخدمات">Services</a>
+        <a href="portfolio.html" data-en="Portfolio" data-fr="Portfolio" data-es="Portafolio" data-ar="الأعمال">Portfolio</a>
+        <a href="testimonials.html" data-en="Testimonials" data-fr="Témoignages" data-es="Testimonios" data-ar="آراء العملاء">Testimonials</a>
+        <a href="contact.html" class="active" data-en="Contact" data-fr="Contact" data-es="Contacto" data-ar="اتصل بنا">Contact</a>
+        <button id="lang-switcher" class="lang-switcher-button">FR</button>
       </nav>
     </div>
   </header>
 
   <!-- Contact Section -->
-  <section class="contact-section">
+  <section class="page-section contact-section">
     <div class="container">
-      <h1>Get in Touch</h1>
-      <p>Ready to start your next project? Fill out the form below or reach out via email or phone.</p>
+      <h1 data-en="Get in Touch" data-fr="Contactez-moi" data-es="Ponte en contacto" data-ar="تواصل معي">Get in Touch</h1>
+      <p data-en="Have a project or question? Send me a message."
+         data-fr="Vous avez un projet ou une question ? Envoyez-moi un message."
+         data-es="¿Tienes un proyecto o una pregunta? Envíame un mensaje."
+         data-ar="هل لديك مشروع أو سؤال؟ أرسل لي رسالة.">
+         Have a project or question? Send me a message.
+      </p>
 
-      <form action="mailto:your-email@example.com" method="POST" enctype="text/plain" class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
+      <form class="contact-form" action="https://formsubmit.co/eyesightconcept@gmail.com" method="POST">
+        <!-- Optional fields for FormSubmit settings -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="New message from Eyesightworks site">
+        <input type="hidden" name="_next" value="https://alawode-adewale.github.io/eyesightworks/thank-you.html">
+
+        <input type="text" name="name" placeholder="Your Name" required
+               data-en="Your Name" data-fr="Votre nom" data-es="Tu nombre" data-ar="اسمك">
+        <input type="email" name="email" placeholder="Your Email" required
+               data-en="Your Email" data-fr="Votre email" data-es="Tu correo" data-ar="بريدك الإلكتروني">
+        <textarea name="message" rows="5" placeholder="Your Message" required
+               data-en="Your Message" data-fr="Votre message" data-es="Tu mensaje" data-ar="رسالتك">
+        </textarea>
+        <button type="submit"
+           data-en="Send Message" data-fr="Envoyer le message" data-es="Enviar mensaje" data-ar="إرسال الرسالة">
+           Send Message
+        </button>
       </form>
-
-      <div class="contact-details">
-        <p>Email: contact@eyesightworks.com</p>
-        <p>Phone: +123 456 7890</p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/eyesightworks" target="_blank">/eyesightworks</a></p>
-      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 Eyesightworks. All rights reserved.</p>
+    <p data-en="&copy; 2025 Eyesightworks. All rights reserved."
+       data-fr="&copy; 2025 Eyesightworks. Tous droits réservés."
+       data-es="&copy; 2025 Eyesightworks. Todos los derechos reservados."
+       data-ar="&copy; 2025 Eyesightworks. جميع الحقوق محفوظة.">
+      &copy; 2025 Eyesightworks. All rights reserved.
+    </p>
   </footer>
 
-  <!-- JavaScript for Menu -->
+  <!-- Script -->
   <script>
-    function toggleMenu() {
-      document.getElementById("nav").classList.toggle("nav-open");
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
+    const langSwitcher = document.getElementById("lang-switcher");
+    const html = document.documentElement;
+    const languages = ["en", "fr", "es", "ar"];
+    let currentLangIndex = 0;
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedLang = localStorage.getItem("preferredLang");
+      if (savedLang && languages.includes(savedLang)) {
+        currentLangIndex = languages.indexOf(savedLang);
+        switchLanguage(savedLang);
+      }
+    });
+
+    hamburger.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
+
+    langSwitcher.addEventListener("click", () => {
+      currentLangIndex = (currentLangIndex + 1) % languages.length;
+      const lang = languages[currentLangIndex];
+      switchLanguage(lang);
+      localStorage.setItem("preferredLang", lang);
+    });
+
+    function switchLanguage(lang) {
+      html.lang = lang;
+      html.dir = lang === "ar" ? "rtl" : "ltr";
+      langSwitcher.textContent = lang.toUpperCase();
+      document.querySelectorAll("[data-" + lang + "]").forEach(el => {
+        el.placeholder
+          ? el.placeholder = el.getAttribute("data-" + lang)
+          : el.textContent = el.getAttribute("data-" + lang);
+      });
     }
   </script>
-
 </body>
 </html>
