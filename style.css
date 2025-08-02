@@ -1,128 +1,130 @@
-/* ==== Reset & Base Styles ==== */
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
   color: #222;
-  background: #fff;
   line-height: 1.6;
 }
 
-/* ==== Layout Helpers ==== */
+/* Layout Containers */
 .container {
   width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* ==== Header ==== */
+/* Header */
 .header {
-  background: #f8f8f8;
+  background-color: #f8f8f8;
   border-bottom: 1px solid #ddd;
   padding: 1rem 0;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1000;
 }
-
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .logo {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   font-size: 1.5rem;
+  color: #000;
 }
-
-.hamburger {
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: none;
-}
-
-/* ==== Nav Menu ==== */
 .nav-menu {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.2rem;
   align-items: center;
 }
-
 .nav-menu a {
   text-decoration: none;
-  color: #222;
+  color: #333;
   font-weight: 500;
   transition: color 0.3s;
 }
-
-.nav-menu a.active,
-.nav-menu a:hover {
-  color: #0077cc;
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: #e63946; /* red-pink highlight */
+}
+.language-switcher {
+  padding: 0.3rem;
+  font-size: 1rem;
+}
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
 }
 
-#lang-switcher {
-  padding: 0.3rem 0.8rem;
-  border: 1px solid #ccc;
-  background: transparent;
-  cursor: pointer;
-}
-
-/* ==== Hero Section ==== */
+/* Hero / Sections */
 .hero {
-  background: linear-gradient(to right, #e0f7ff, #f7faff);
+  padding: 4rem 0;
+  background-color: #ffffff;
   text-align: center;
-  padding: 5rem 2rem;
 }
-
 .hero h1 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
-  font-family: 'Montserrat', sans-serif;
+  color: #000;
 }
-
 .hero p {
+  margin-top: 1rem;
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  color: #444;
 }
-
 .download-btn {
-  padding: 0.8rem 1.5rem;
-  background: #0077cc;
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #e63946;
   color: #fff;
+  border: none;
   text-decoration: none;
-  border-radius: 6px;
   font-weight: bold;
-  transition: background 0.3s;
+  transition: background 0.3s ease;
 }
-
 .download-btn:hover {
-  background: #005fa3;
+  background-color: #b82d39;
 }
 
-/* ==== Sections (About, Services, etc.) ==== */
-.page-section {
-  padding: 4rem 2rem;
+/* About Section */
+.about-section {
+  padding: 3rem 0;
 }
-
-.page-section h1 {
-  text-align: center;
+.about-section h1 {
   font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.about-section p {
   margin-bottom: 1rem;
-  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  color: #333;
 }
 
-.page-section p {
-  max-width: 8
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #f0f0f0;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #f8f8f8;
+    padding: 1rem;
+  }
+  .nav-menu.show {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+}
