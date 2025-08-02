@@ -20,7 +20,7 @@ body {
 
 /* Header */
 .header {
-  background-color: #f8f8f8;
+  background-color: #f0f0f0;
   border-bottom: 1px solid #ddd;
   padding: 1rem 0;
   position: sticky;
@@ -31,7 +31,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   font-size: 1.5rem;
-  color: #000;
+  color: #007BFF;
 }
 .nav-menu {
   display: flex;
@@ -47,7 +47,7 @@ body {
 }
 .nav-menu a:hover,
 .nav-menu a.active {
-  color: #e63946; /* red-pink highlight */
+  color: #28a745; /* Light green on hover/active */
 }
 .language-switcher {
   padding: 0.3rem;
@@ -58,6 +58,7 @@ body {
   font-size: 1.5rem;
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 /* Hero / Sections */
@@ -68,7 +69,7 @@ body {
 }
 .hero h1 {
   font-size: 2.5rem;
-  color: #000;
+  color: #007BFF;
 }
 .hero p {
   margin-top: 1rem;
@@ -79,7 +80,7 @@ body {
   display: inline-block;
   margin-top: 1.5rem;
   padding: 0.75rem 1.5rem;
-  background-color: #e63946;
+  background-color: #007BFF;
   color: #fff;
   border: none;
   text-decoration: none;
@@ -87,7 +88,7 @@ body {
   transition: background 0.3s ease;
 }
 .download-btn:hover {
-  background-color: #b82d39;
+  background-color: #0056b3;
 }
 
 /* About Section */
@@ -97,6 +98,7 @@ body {
 .about-section h1 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
+  color: #007BFF;
 }
 .about-section p {
   margin-bottom: 1rem;
@@ -125,6 +127,5 @@ footer {
   }
   .hamburger {
     display: block;
-    cursor: pointer;
   }
 }
