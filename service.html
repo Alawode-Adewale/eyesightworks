@@ -1,82 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Our Services - Eyesightworks" />
+  <meta name="description" content="Eyesightworks - Web Development, Branding, Translation Services" />
   <title>Services | Eyesightworks</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    .nav-menu {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .hamburger {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+      }
+
+      .nav-menu {
+        display: none;
+        flex-direction: column;
+      }
+
+      .nav-menu.show {
+        display: flex;
+      }
+    }
+
+    .lang-switcher-button {
+      background: none;
+      border: 1px solid #ccc;
+      padding: 0.4em 0.8em;
+      cursor: pointer;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .service {
+      margin-bottom: 2rem;
+    }
+  </style>
 </head>
+
 <body>
   <!-- Header -->
   <header class="header">
-    <div class="logo">Eyesightworks</div>
-    <nav id="nav-menu" class="nav-menu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html" class="active">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="contact.html">Contact</a>
-      <select class="language-switcher" aria-label="Language switcher" onchange="changeLanguage(this.value)">
-        <option value="en">EN</option>
-        <option value="fr">FR</option>
-        <option value="es">ES</option>
-        <option value="ar">AR</option>
-      </select>
-    </nav>
-    <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">☰</button>
+    <div class="container nav-container">
+      <div class="logo">Eyesightworks</div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">&#9776;</button>
+      <nav class="nav-menu" id="nav-menu" role="navigation">
+        <a href="index.html" data-en="Home" data-fr="Accueil" data-es="Inicio" data-ar="الرئيسية">Home</a>
+        <a href="about.html" data-en="About" data-fr="À propos" data-es="Sobre" data-ar="من نحن">About</a>
+        <a href="services.html" class="active" data-en="Services" data-fr="Services" data-es="Servicios" data-ar="الخدمات">Services</a>
+        <a href="portfolio.html" data-en="Portfolio" data-fr="Portfolio" data-es="Portafolio" data-ar="الأعمال">Portfolio</a>
+        <a href="testimonials.html" data-en="Testimonials" data-fr="Témoignages" data-es="Testimonios" data-ar="آراء العملاء">Testimonials</a>
+        <a href="contact.html" data-en="Contact" data-fr="Contact" data-es="Contacto" data-ar="اتصل بنا">Contact</a>
+        <button id="lang-switcher" class="lang-switcher-button" aria-label="Switch language">FR</button>
+      </nav>
+    </div>
   </header>
 
   <!-- Services Section -->
   <section class="page-section services-section">
     <div class="container">
-      <h1 data-en="Our Services" data-fr="Nos Services" data-es="Nuestros Servicios" data-ar="خدماتنا">Our Services</h1>
-      <ul class="service-list">
-        <li data-en="🌐 Web Development – Custom, responsive, and fast-loading websites using the latest technologies."
-            data-fr="🌐 Développement Web – Sites personnalisés, réactifs et rapides avec les dernières technologies."
-            data-es="🌐 Desarrollo Web – Sitios personalizados, receptivos y rápidos con las últimas tecnologías."
-            data-ar="🌐 تطوير الويب – مواقع مخصصة وسريعة الاستجابة باستخدام أحدث التقنيات.">
-            🌐 Web Development – Custom, responsive, and fast-loading websites using the latest technologies.
-        </li>
-        <li data-en="🎨 Brand Identity – Professional logo design, color palette, typography and complete brand style guides."
-            data-fr="🎨 Identité de Marque – Logos professionnels, palettes de couleurs et guides de style complets."
-            data-es="🎨 Identidad de Marca – Diseño de logotipos, paletas de colores y guías de estilo completas."
-            data-ar="🎨 الهوية البصرية – تصميم شعار احترافي، ألوان وخطوط ودليل شامل للهوية.">
-            🎨 Brand Identity – Professional logo design, color palette, typography and complete brand style guides.
-        </li>
-        <li data-en="🌍 Language Translation – Website & content translation in English, French, Spanish, and Arabic."
-            data-fr="🌍 Traduction – Traduction de sites web et de contenu en anglais, français, espagnol et arabe."
-            data-es="🌍 Traducción – Traducción de sitios web y contenido en inglés, francés, español y árabe."
-            data-ar="🌍 الترجمة – ترجمة المواقع والمحتوى إلى الإنجليزية، الفرنسية، الإسبانية والعربية.">
-            🌍 Language Translation – Website & content translation in English, French, Spanish, and Arabic.
-        </li>
-        <li data-en="📈 SEO Optimization – Improve your site’s ranking on search engines with tailored SEO strategies."
-            data-fr="📈 Optimisation SEO – Améliorez votre référencement grâce à des stratégies SEO sur mesure."
-            data-es="📈 Optimización SEO – Mejore su clasificación en buscadores con estrategias personalizadas."
-            data-ar="📈 تحسين محركات البحث – رفع ترتيب موقعك بخطط مخصصة لتحسين محركات البحث.">
-            📈 SEO Optimization – Improve your site’s ranking on search engines with tailored SEO strategies.
-        </li>
-      </ul>
+      <h1 data-en="My Services" data-fr="Mes Services" data-es="Mis Servicios" data-ar="خدماتي">My Services</h1>
+
+      <div class="service">
+        <h2 data-en="Web Development" data-fr="Développement Web" data-es="Desarrollo Web" data-ar="تطوير الويب">Web Development</h2>
+        <p data-en="I build modern, responsive, and fast websites tailored to your business needs."
+           data-fr="Je crée des sites web modernes, réactifs et rapides adaptés à vos besoins professionnels."
+           data-es="Construyo sitios web modernos, responsivos y rápidos adaptados a tus necesidades."
+           data-ar="أقوم بإنشاء مواقع ويب حديثة وسريعة الاستجابة وسريعة تتناسب مع احتياجات عملك.">
+           I build modern, responsive, and fast websites tailored to your business needs.
+        </p>
+      </div>
+
+      <div class="service">
+        <h2 data-en="Brand Identity" data-fr="Identité de Marque" data-es="Identidad de Marca" data-ar="هوية العلامة التجارية">Brand Identity</h2>
+        <p data-en="From logos to complete branding systems, I help you stand out in your market."
+           data-fr="Des logos aux systèmes d'identité complets, je vous aide à vous démarquer."
+           data-es="Desde logotipos hasta sistemas de marca completos, te ayudo a destacar."
+           data-ar="من الشعارات إلى أنظمة الهوية الكاملة، أساعدك على التميز في السوق.">
+           From logos to complete branding systems, I help you stand out in your market.
+        </p>
+      </div>
+
+      <div class="service">
+        <h2 data-en="Translation" data-fr="Traduction" data-es="Traducción" data-ar="الترجمة">Translation</h2>
+        <p data-en="Accurate and culturally sensitive translations in English, French, Arabic, and Spanish."
+           data-fr="Traductions précises et adaptées culturellement en anglais, français, arabe et espagnol."
+           data-es="Traducciones precisas y culturalmente adecuadas en inglés, francés, árabe y español."
+           data-ar="ترجمات دقيقة ومراعية للثقافة باللغات الإنجليزية والفرنسية والعربية والإسبانية.">
+           Accurate and culturally sensitive translations in English, French, Arabic, and Spanish.
+        </p>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Eyesightworks. All rights reserved.</p>
+  <footer class="footer">
+    <p data-en="&copy; 2025 Eyesightworks. All rights reserved."
+       data-fr="&copy; 2025 Eyesightworks. Tous droits réservés."
+       data-es="&copy; 2025 Eyesightworks. Todos los derechos reservados."
+       data-ar="&copy; 2025 Eyesightworks. جميع الحقوق محفوظة.">
+      &copy; 2025 Eyesightworks. All rights reserved.
+    </p>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Script -->
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById("nav-menu");
-      menu.classList.toggle("show");
-    }
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
+    const langSwitcher = document.getElementById("lang-switcher");
+    const html = document.documentElement;
 
-    function changeLanguage(lang) {
-      const elements = document.querySelectorAll("[data-" + lang + "]");
-      elements.forEach(el => {
+    const languages = ["en", "fr", "es", "ar"];
+    let currentLangIndex = 0;
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedLang = localStorage.getItem("preferredLang");
+      if (savedLang && languages.includes(savedLang)) {
+        currentLangIndex = languages.indexOf(savedLang);
+        switchLanguage(savedLang);
+      }
+    });
+
+    hamburger.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
+
+    langSwitcher.addEventListener("click", () => {
+      currentLangIndex = (currentLangIndex + 1) % languages.length;
+      const lang = languages[currentLangIndex];
+      switchLanguage(lang);
+      localStorage.setItem("preferredLang", lang);
+    });
+
+    function switchLanguage(lang) {
+      html.lang = lang;
+      html.dir = lang === "ar" ? "rtl" : "ltr";
+      langSwitcher.textContent = lang.toUpperCase();
+
+      document.querySelectorAll("[data-" + lang + "]").forEach(el => {
         el.textContent = el.getAttribute("data-" + lang);
       });
     }
