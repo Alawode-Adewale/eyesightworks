@@ -6,15 +6,15 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background: #f7f9fc;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e6f0fa; /* light gray-blue */
   color: #333;
+  line-height: 1.6;
 }
 
-/* Header & Navigation */
+/* Header */
 .header {
-  background: #0e1c36;
+  background-color: #0a2540; /* dark navy blue */
   color: #fff;
   padding: 1rem 2rem;
   display: flex;
@@ -24,14 +24,18 @@ body {
 }
 
 .logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
   font-size: 1.5rem;
-  font-weight: bold;
+  color: #fff;
 }
 
+/* Navigation */
 .nav-menu {
   display: flex;
   gap: 1.5rem;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .nav-menu a {
@@ -43,7 +47,7 @@ body {
 
 .nav-menu a:hover,
 .nav-menu a.active {
-  color: #00c9a7;
+  color: #00c9a7; /* medium turquoise */
 }
 
 .language-switcher {
@@ -67,11 +71,12 @@ body {
 .hero {
   text-align: center;
   padding: 4rem 2rem;
-  background: linear-gradient(to right, #00c9a7, #92fe9d);
-  color: #0e1c36;
+  background: linear-gradient(to right, #008080, #90ee90); /* teal to light green */
+  color: #fff;
 }
 
 .hero h1 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
@@ -86,25 +91,25 @@ body {
 .download-btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: #0e1c36;
+  background-color: #0a2540; /* dark navy blue */
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .download-btn:hover {
-  background-color: #00c9a7;
-  color: #0e1c36;
+  background-color: #00c9a7; /* medium turquoise */
+  color: #0a2540;
 }
 
 /* Footer */
 footer {
-  text-align: center;
-  padding: 1rem;
-  background: #0e1c36;
+  background-color: #0a2540; /* dark navy blue */
   color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
   font-size: 0.9rem;
   margin-top: 2rem;
 }
@@ -116,7 +121,7 @@ footer {
     position: absolute;
     top: 60px;
     right: 0;
-    background: #0e1c36;
+    background-color: #0a2540;
     width: 100%;
     display: none;
     text-align: right;
